@@ -1,0 +1,124 @@
+** sch_path: /foss/designs/ttsky25a_minimosbius/xschem/tb_shift_reg.sch
+**.subckt tb_shift_reg
+V2 VDPWR GND 1.8
+.save i(v2)
+C1[7] reg7 GND 10f m=1
+C1[6] reg6 GND 10f m=1
+C1[5] reg5 GND 10f m=1
+C1[4] reg4 GND 10f m=1
+C1[3] reg3 GND 10f m=1
+C1[2] reg2 GND 10f m=1
+C1[1] reg1 GND 10f m=1
+C1[0] reg0 GND 10f m=1
+V1 clk GND PULSE 0 1.8 50n 100p 100p 50n 100n
+.save i(v1)
+V3 rstb GND PULSE 1.8 0 1u 100p 100p 500n 1m
+.save i(v3)
+x1 VDPWR clk reg7 reg6 reg5 reg4 reg3 reg2 reg1 reg0 VDPWR rstb GND shift_reg_short
+**** begin user architecture code
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /foss/pdks/sky130A/libs.tech/ngspice/corners/tt.spice
+.include /foss/pdks/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /foss/pdks/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /foss/pdks/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+
+
+*****************************************
+* Shift Register Test
+*****************************************
+* holds a logic 1 at the shift reg input, and it propagates down
+* the shift register. A asynchronous reset is also asserted.
+* a shorter 8-bit shift register is tested for simulation time.
+*****************************************
+.control
+   save all
+   set temp=27
+   tran 100p 3u
+   plot v(reg0) v(reg1) v(reg2) v(reg3) v(reg4) v(reg5) v(reg6) v(reg7)
+   plot v(rstb)
+   plot v(clk)
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  shift_reg_short.sym # of pins=6
+** sym_path: /foss/designs/ttsky25a_minimosbius/xschem/shift_reg_short.sym
+** sch_path: /foss/designs/ttsky25a_minimosbius/xschem/shift_reg_short.sch
+.subckt shift_reg_short VPWR clk reg[7] reg[6] reg[5] reg[4] reg[3] reg[2] reg[1] reg[0] dat rstb
++ VGND
+*.ipin clk
+*.ipin dat
+*.ipin rstb
+*.iopin VPWR
+*.iopin VGND
+*.opin reg[7],reg[6],reg[5],reg[4],reg[3],reg[2],reg[1],reg[0]
+x1[7] clk reg[6] rstb VGND VGND VPWR VPWR reg[7] dff
+x1[6] clk reg[5] rstb VGND VGND VPWR VPWR reg[6] dff
+x1[5] clk reg[4] rstb VGND VGND VPWR VPWR reg[5] dff
+x1[4] clk reg[3] rstb VGND VGND VPWR VPWR reg[4] dff
+x1[3] clk reg[2] rstb VGND VGND VPWR VPWR reg[3] dff
+x1[2] clk reg[1] rstb VGND VGND VPWR VPWR reg[2] dff
+x1[1] clk reg[0] rstb VGND VGND VPWR VPWR reg[1] dff
+x1[0] clk dat rstb VGND VGND VPWR VPWR reg[0] dff
+.ends
+
+
+* expanding   symbol:  dff.sym # of pins=8
+** sym_path: /foss/designs/ttsky25a_minimosbius/xschem/dff.sym
+** sch_path: /foss/designs/ttsky25a_minimosbius/xschem/dff.sch
+.subckt dff CLK D RESET_B VGND VNB VPB VPWR Q
+*.ipin CLK
+*.ipin D
+*.ipin RESET_B
+*.iopin VGND
+*.iopin VNB
+*.iopin VPB
+*.iopin VPWR
+*.opin Q
+**** begin user architecture code
+
+
+X0 a_1270_413# a_1283_21# VPWR VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u
+X1 VPWR a_543_47# a_761_289# VPB sky130_fd_pr__pfet_01v8_hvt w=840000u l=150000u
+X2 VGND a_543_47# a_761_289# VNB sky130_fd_pr__nfet_01v8 w=640000u l=150000u
+X3 VGND D a_448_47# VNB sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 a_1108_47# a_193_47# a_1270_413# VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u
+X5 VGND a_1283_21# Q VNB sky130_fd_pr__nfet_01v8 w=650000u l=150000u
+X6 a_1217_47# a_1283_21# VGND VNB sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X7 a_448_47# a_27_47# a_543_47# VNB sky130_fd_pr__nfet_01v8 w=360000u l=150000u
+X8 a_448_47# a_193_47# a_543_47# VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u
+X9 a_543_47# a_193_47# a_639_47# VNB sky130_fd_pr__nfet_01v8 w=360000u l=150000u
+X10 a_1108_47# a_27_47# a_1217_47# VNB sky130_fd_pr__nfet_01v8 w=360000u l=150000u
+X11 a_1462_47# a_1108_47# a_1283_21# VNB sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X12 a_543_47# a_27_47# a_651_413# VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u
+X13 a_805_47# RESET_B VGND VNB sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X14 a_761_289# a_193_47# a_1108_47# VNB sky130_fd_pr__nfet_01v8 w=360000u l=150000u
+X15 VPWR RESET_B a_651_413# VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u
+X16 VGND a_27_47# a_193_47# VNB sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X17 a_27_47# CLK VGND VNB sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X18 a_27_47# CLK VPWR VPB sky130_fd_pr__pfet_01v8_hvt w=640000u l=150000u
+X19 VPWR a_1283_21# Q VPB sky130_fd_pr__pfet_01v8_hvt w=1e+06u l=150000u
+X20 VPWR a_27_47# a_193_47# VPB sky130_fd_pr__pfet_01v8_hvt w=640000u l=150000u
+X21 a_1283_21# a_1108_47# VPWR VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u
+X22 VGND RESET_B a_1462_47# VNB sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X23 VPWR D a_448_47# VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u
+X24 a_651_413# a_761_289# VPWR VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u
+X25 a_761_289# a_27_47# a_1108_47# VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u
+X26 VPWR RESET_B a_1283_21# VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u
+X27 a_639_47# a_761_289# a_805_47# VNB sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+
+
+**** end user architecture code
+**** begin user architecture code
+
+
+**** end user architecture code
+.ends
+
+.GLOBAL GND
+.end
