@@ -6,6 +6,7 @@ V {}
 S {
 }
 E {}
+T {standard cell: sky130_fd_sc_hd__dfrtp_1} 70 -170 0 0 0.4 0.4 {}
 C {devices/code_shown.sym} 0 -50 0 0 {name=s1 only_toplevel=false value=
 "
 X0 a_1270_413# a_1283_21# VPWR VPB sky130_fd_pr__pfet_01v8_hvt w=420000u l=150000u

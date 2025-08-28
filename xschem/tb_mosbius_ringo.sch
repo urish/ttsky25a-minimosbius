@@ -256,8 +256,6 @@ N 1820 -890 1980 -890 {
 lab=#net4}
 N 2080 -890 2240 -890 {
 lab=n1_ref}
-N 2240 -1180 2240 -890 {
-lab=n1_ref}
 N 1380 -1180 2240 -1180 {
 lab=n1_ref}
 N 1380 -1180 1380 -890 {
@@ -297,6 +295,24 @@ lab=out_ref}
 N 2300 -320 2300 -300 {
 lab=GND}
 N 2300 -410 2300 -380 {
+lab=out_ref}
+N 2240 -1180 2240 -890 {
+lab=n1_ref}
+N 1720 -740 1720 -720 {
+lab=GND}
+N 1980 -740 1980 -720 {
+lab=GND}
+N 2240 -760 2240 -740 {
+lab=GND}
+N 2240 -890 2240 -820 {
+lab=n1_ref}
+N 1980 -830 1980 -800 {
+lab=#net4}
+N 1720 -830 1720 -800 {
+lab=#net3}
+N 2220 -320 2220 -300 {
+lab=GND}
+N 2220 -410 2220 -380 {
 lab=out_ref}
 C {mosbius.sym} 300 -240 0 0 {name=x1}
 C {devices/vsource.sym} 100 150 0 0 {name=VAPWR value=3.3}
@@ -338,6 +354,10 @@ C {devices/code_shown.sym} 1040 290 0 0 {name=NGSPICE only_toplevel=true value=
    tran 100p 500n UIC
    plot v(out)
    plot v(out_ref)
+   meas tran crossing1 when v(out)=0.9 rise=5
+   meas tran crossing2 when v(out)=0.9 rise=6
+   meas tran crossing_ref1 when v(out_ref)=0.9 rise=5
+   meas tran crossing_ref2 when v(out_ref)=0.9 rise=6
 .endc
 "}
 C {devices/gnd.sym} 150 400 0 0 {name=l10 lab=GND}
@@ -564,9 +584,33 @@ C {devices/gnd.sym} 2080 -260 0 0 {name=l19 lab=GND}
 C {devices/lab_pin.sym} 2080 -570 1 0 {name=p35 sig_type=std_logic lab=VAPWR}
 C {devices/capa.sym} 2300 -350 0 0 {name=C2
 m=1
-value=1p
+value=100f
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 2300 -300 0 0 {name=l20 lab=GND}
 C {devices/lab_pin.sym} 2300 -410 0 1 {name=p36 sig_type=std_logic lab=out_ref}
-C {devices/lab_pin.sym} 1380 -890 0 0 {name=p37 sig_type=std_logic lab=n1_ref}
+C {devices/lab_pin.sym} 2200 -890 1 0 {name=p37 sig_type=std_logic lab=n1_ref}
+C {devices/capa.sym} 1720 -770 0 0 {name=C3
+m=1
+value=17p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/gnd.sym} 1720 -720 0 0 {name=l15 lab=GND}
+C {devices/capa.sym} 1980 -770 0 0 {name=C4
+m=1
+value=17p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/gnd.sym} 1980 -720 0 0 {name=l21 lab=GND}
+C {devices/capa.sym} 2240 -790 0 0 {name=C5
+m=1
+value=17p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/gnd.sym} 2240 -740 0 0 {name=l22 lab=GND}
+C {devices/capa.sym} 2220 -350 0 0 {name=C6
+m=1
+value=17p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/gnd.sym} 2220 -300 0 0 {name=l23 lab=GND}

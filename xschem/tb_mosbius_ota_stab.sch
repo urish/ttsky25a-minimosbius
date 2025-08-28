@@ -294,7 +294,7 @@ C {devices/code_shown.sym} 1370 -120 0 0 {name=NGSPICE only_toplevel=true value=
 .control
    save all
    set temp = 27
-   ac dec 51 10k 9G
+   ac dec 51 10k 1G
    let vout_mag = mag(v(vout))                 ; loop gain
    let vout_ref_mag = mag(v(vout_ref))         ; loop gain of reference OTA
    let phase = -180-cph(vout)/PI*180           ; phase margin

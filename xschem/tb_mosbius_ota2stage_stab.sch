@@ -407,9 +407,9 @@ C {devices/lab_pin.sym} 2560 -720 2 0 {name=p34 sig_type=std_logic lab=vinp_ref}
 C {devices/lab_wire.sym} 1820 -680 0 0 {name=p35 sig_type=std_logic lab=g,g
 }
 C {devices/lab_wire.sym} 1820 -700 0 0 {name=p36 sig_type=std_logic lab=Ibias_ref}
-C {/foss/designs/sky130_tt_minimosbius/pad_model/pad_model.sym} -50 -1130 0 0 {name=x2[5:1]}
+C {pad_model.sym} -50 -1130 0 0 {name=x2[5:1]}
 C {devices/lab_wire.sym} -220 -1150 0 0 {name=p9 sig_type=std_logic lab=g,vout,vcomp,vinm,vinp}
-C {/foss/designs/sky130_tt_minimosbius/pad_model/pad_model.sym} -50 -1030 0 0 {name=x2}
+C {pad_model.sym} -50 -1030 0 0 {name=x2}
 C {devices/lab_pin.sym} -260 -1050 0 0 {name=p6 sig_type=std_logic lab=Ibias}
 C {devices/gnd.sym} -220 -1100 0 0 {name=l14 lab=GND}
 C {devices/gnd.sym} -220 -1000 0 0 {name=l15 lab=GND}

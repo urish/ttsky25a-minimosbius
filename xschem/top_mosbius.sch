@@ -20,7 +20,7 @@ N 180 -370 320 -370 {
 lab=ua[5]}
 N -480 -400 -410 -400 {
 lab=VDPWR}
-N -480 -290 -410 -290 {
+N -480 -260 -410 -260 {
 lab=VGND}
 N -250 -360 -160 -360 {bus=true
 lab=uo_out[0],reg[190:0]}
@@ -32,11 +32,13 @@ N -480 -320 -410 -320 {
 lab=rst_n}
 N -360 -180 -240 -180 {
 lab=uo_out[0]}
+N -480 -300 -410 -300 {
+lab=ui_in[0]}
 C {mosbius.sym} 320 500 0 0 {name=x2}
 C {devices/iopin.sym} 180 -410 2 0 {name=p4 lab=ua[4:0]}
 C {devices/iopin.sym} 180 -370 2 0 {name=p5 lab=ua[5]}
 C {devices/lab_pin.sym} -480 -400 0 0 {name=p6 sig_type=std_logic lab=VDPWR}
-C {devices/lab_pin.sym} -480 -290 0 0 {name=p7 sig_type=std_logic lab=VGND}
+C {devices/lab_pin.sym} -480 -260 0 0 {name=p7 sig_type=std_logic lab=VGND}
 C {devices/lab_pin.sym} -160 -360 0 1 {name=p8 sig_type=std_logic lab=uo_out[0],reg[190:0]}
 C {devices/ipin.sym} 180 -510 0 0 {name=p17 lab=VAPWR}
 C {devices/ipin.sym} 180 -490 0 0 {name=p2 lab=VDPWR}
@@ -46,3 +48,4 @@ C {devices/ipin.sym} -480 -340 0 0 {name=p19 lab=ui_in[0]}
 C {devices/ipin.sym} -480 -320 0 0 {name=p20 lab=rst_n}
 C {devices/opin.sym} -240 -180 0 0 {name=p21 lab=uo_out[0]}
 C {shift_reg.sym} -390 -340 0 0 {name=x1}
+C {devices/ipin.sym} -480 -300 0 0 {name=p1 lab=ui_in[1]}
