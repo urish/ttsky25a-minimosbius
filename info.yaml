@@ -25,17 +25,17 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
+  ui[0]: "dat_in"
+  ui[1]: "clk"
+  ui[2]: "rstn"
+  ui[3]: "ena"
   ui[4]: ""
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
+  uo[0]: "dat_out"
   uo[1]: ""
   uo[2]: ""
   uo[3]: ""
@@ -55,12 +55,12 @@ pinout:
   uio[7]: ""
 
   # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
-  ua[0]: ""
-  ua[1]: ""
-  ua[2]: ""
-  ua[3]: ""
-  ua[4]: ""
-  ua[5]: ""
+  ua[0]: "bus1"
+  ua[1]: "bus2"
+  ua[2]: "bus3"
+  ua[3]: "bus4"
+  ua[4]: "bus5"
+  ua[5]: "ibias"
 
 # Do not change!
 yaml_version: 6
