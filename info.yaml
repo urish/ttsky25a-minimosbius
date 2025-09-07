@@ -27,7 +27,7 @@ pinout:
   # Inputs
   ui[0]: "dat_in"
   ui[1]: "clk"
-  ui[2]: "rstn"
+  ui[2]: ""
   ui[3]: "ena"
   ui[4]: ""
   ui[5]: ""

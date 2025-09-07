@@ -5,6 +5,7 @@ K {}
 V {}
 S {}
 E {}
+T {Dummies} 940 20 0 0 0.4 0.4 {}
 N 220 450 280 450 {
 lab=ctrl_width[0]}
 N 220 610 280 610 {
@@ -111,6 +112,38 @@ N 600 770 600 830 {
 lab=VAPWR}
 N 580 830 600 830 {
 lab=VAPWR}
+N 740 -160 880 -160 {
+lab=Vs}
+N 880 -160 880 -100 {
+lab=Vs}
+N 880 -40 880 -20 {
+lab=Vs}
+N 880 -20 920 -20 {
+lab=Vs}
+N 920 -160 920 -20 {
+lab=Vs}
+N 880 -160 920 -160 {
+lab=Vs}
+N 880 -70 920 -70 {
+lab=Vs}
+N 840 -160 840 -70 {
+lab=Vs}
+N 920 -160 1060 -160 {
+lab=Vs}
+N 1060 -160 1060 -100 {
+lab=Vs}
+N 1060 -40 1060 -20 {
+lab=Vs}
+N 1060 -20 1100 -20 {
+lab=Vs}
+N 1100 -160 1100 -20 {
+lab=Vs}
+N 1060 -160 1100 -160 {
+lab=Vs}
+N 1060 -70 1100 -70 {
+lab=Vs}
+N 1020 -160 1020 -70 {
+lab=Vs}
 C {devices/ipin.sym} 0 150 0 0 {name=p4 lab=ctrl_width[1:0]}
 C {devices/iopin.sym} 0 -160 0 1 {name=p7 lab=Vs}
 C {devices/iopin.sym} 0 -70 0 1 {name=p1 lab=Vg}
@@ -176,3 +209,31 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 460 80 1 1 {name=p18 sig_type=std_logic lab=Vd_1x}
 C {devices/lab_pin.sym} 680 80 1 1 {name=p19 sig_type=std_logic lab=Vd_2x}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 860 -70 0 0 {name=M4
+L=0.5
+W=5
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 1040 -70 0 0 {name=M5
+L=0.5
+W=5
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}

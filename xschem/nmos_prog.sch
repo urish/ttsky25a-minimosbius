@@ -5,6 +5,7 @@ K {}
 V {}
 S {}
 E {}
+T {Dummies} 770 -180 0 0 0.4 0.4 {}
 N 100 -50 100 20 {
 lab=Vs}
 N 100 20 500 20 {
@@ -111,6 +112,22 @@ N 580 -80 580 20 {
 lab=Vs}
 N 500 20 580 20 {
 lab=Vs}
+N 580 20 720 20 {
+lab=Vs}
+N 720 -50 720 20 {
+lab=Vs}
+N 680 -80 680 20 {
+lab=Vs}
+N 720 -140 720 -110 {
+lab=Vs}
+N 720 -140 760 -140 {
+lab=Vs}
+N 760 -140 760 20 {
+lab=Vs}
+N 720 20 760 20 {
+lab=Vs}
+N 720 -80 760 -80 {
+lab=Vs}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 80 -80 0 0 {name=M1
 L=0.5
 W=10
@@ -176,3 +193,17 @@ C {devices/lab_pin.sym} 620 550 0 1 {name=p16 sig_type=std_logic lab=Vd_2x}
 C {devices/lab_pin.sym} 620 710 0 1 {name=p17 sig_type=std_logic lab=Vs}
 C {devices/lab_pin.sym} 300 -200 3 1 {name=p18 sig_type=std_logic lab=Vd_1x}
 C {devices/lab_pin.sym} 500 -200 3 1 {name=p19 sig_type=std_logic lab=Vd_2x}
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 700 -80 0 0 {name=M4
+L=0.5
+W=20
+nf=4
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_g5v0d10v5
+spiceprefix=X
+}

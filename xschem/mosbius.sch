@@ -539,6 +539,18 @@ N 920 100 1060 100 {
 lab=ctrl_pfetb_source}
 N 360 -2320 540 -2320 {bus=true
 lab=bus_A[5:1]}
+N 3180 550 3210 550 {
+lab=VAPWR}
+N 3180 570 3210 570 {
+lab=VDPWR}
+N 3180 630 3210 630 {
+lab=VGND}
+N 3180 590 3360 590 {bus=true
+lab=bus_A[6:1]}
+N 3180 610 3360 610 {bus=true
+lab=bus_B[6:1]}
+N 2800 550 2880 550 {bus=true
+lab=cfg_bus_short[6:1]}
 C {mirror_n.sym} 390 -1480 0 0 {name=x2}
 C {devices/lab_pin.sym} 310 -2050 0 0 {name=p1 sig_type=std_logic lab=VAPWR}
 C {devices/lab_pin.sym} 310 -2030 0 0 {name=p2 sig_type=std_logic lab=VDPWR}
@@ -674,7 +686,7 @@ C {devices/lab_pin.sym} 2710 -2410 0 1 {name=p166 sig_type=std_logic lab=VGND}
 C {devices/lab_pin.sym} 2710 -490 0 1 {name=p168 sig_type=std_logic lab=xpt_pfeta_d}
 C {devices/lab_pin.sym} 2710 -330 0 1 {name=p169 sig_type=std_logic lab=xpt_pfeta_g}
 C {devices/lab_pin.sym} 2710 -170 0 1 {name=p170 sig_type=std_logic lab=xpt_pfeta_s}
-C {devices/lab_pin.sym} 2510 -2800 1 0 {name=p274 sig_type=std_logic lab=bus_A[6:1]}
+C {devices/lab_pin.sym} 2510 -2800 1 0 {name=p274 sig_type=std_logic lab=bus_A_int[6:1]}
 C {devices/bus_connect_nolab.sym} 2500 -2230 0 0 {name=r1}
 C {devices/lab_wire.sym} 2440 -2230 0 0 {name=p171 sig_type=std_logic lab=bus_A[3:1]}
 C {devices/lab_wire.sym} 2450 -1590 0 0 {name=p172 sig_type=std_logic lab=bus_A[3:1]}
@@ -762,7 +774,7 @@ C {devices/lab_pin.sym} 4210 -630 0 1 {name=p196 sig_type=std_logic lab=xpt_nfet
 C {devices/lab_pin.sym} 4210 -470 0 1 {name=p199 sig_type=std_logic lab=xpt_pfetb_d}
 C {devices/lab_pin.sym} 4210 -310 0 1 {name=p200 sig_type=std_logic lab=xpt_pfetb_g}
 C {devices/lab_pin.sym} 4210 -150 0 1 {name=p201 sig_type=std_logic lab=xpt_pfetb_s}
-C {devices/lab_pin.sym} 4010 -2780 1 0 {name=p202 sig_type=std_logic lab=bus_B[6:1]}
+C {devices/lab_pin.sym} 4010 -2780 1 0 {name=p202 sig_type=std_logic lab=bus_B_int[6:1]}
 C {devices/bus_connect_nolab.sym} 4000 -2210 0 0 {name=r4}
 C {devices/lab_wire.sym} 3940 -2210 0 0 {name=p203 sig_type=std_logic lab=bus_B[3:1]}
 C {devices/lab_wire.sym} 3950 -1570 0 0 {name=p204 sig_type=std_logic lab=bus_B[3:1]}
@@ -794,8 +806,8 @@ C {devices/lab_pin.sym} 3210 410 0 1 {name=p86 sig_type=std_logic lab=VAPWR}
 C {devices/lab_pin.sym} 3210 430 0 1 {name=p87 sig_type=std_logic lab=VDPWR}
 C {devices/lab_pin.sym} 3210 490 0 1 {name=p162 sig_type=std_logic lab=VGND}
 C {devices/ipin.sym} 2800 410 0 0 {name=p197 lab=cfg_bus_short[6:1]}
-C {devices/lab_pin.sym} 3360 450 2 0 {name=p198 sig_type=std_logic lab=bus_A[6:1]}
-C {devices/lab_pin.sym} 3360 470 2 0 {name=p206 sig_type=std_logic lab=bus_B[6:1]}
+C {devices/lab_pin.sym} 3360 450 2 0 {name=p198 sig_type=std_logic lab=bus_A_int[6:1]}
+C {devices/lab_pin.sym} 3360 470 2 0 {name=p206 sig_type=std_logic lab=bus_B_int[6:1]}
 C {devices/ipin.sym} 200 -1890 0 0 {name=p207 lab=ctrl_otan_tail[1:0]}
 C {devices/ipin.sym} 200 -1870 0 0 {name=p209 lab=ctrl_otan_diode}
 C {devices/ipin.sym} 200 -1400 0 0 {name=p222 lab=ctrl_mirn_a[1:0]}
@@ -827,3 +839,10 @@ C {nmos_prog.sym} 110 -410 0 0 {name=x6}
 C {nmos_prog.sym} 110 50 0 0 {name=x7}
 C {pmos_prog.sym} 1160 -420 0 0 {name=x8}
 C {pmos_prog.sym} 1160 40 0 0 {name=x9}
+C {tt_asw_3v3.sym} 3030 590 0 0 {name=x1[5:1]}
+C {devices/lab_pin.sym} 3210 550 0 1 {name=p243 sig_type=std_logic lab=VAPWR}
+C {devices/lab_pin.sym} 3210 570 0 1 {name=p244 sig_type=std_logic lab=VDPWR}
+C {devices/lab_pin.sym} 3210 630 0 1 {name=p245 sig_type=std_logic lab=VGND}
+C {devices/ipin.sym} 2800 550 0 0 {name=p246 lab=cfg_bus_ext[5:1]}
+C {devices/lab_pin.sym} 3360 590 2 0 {name=p247 sig_type=std_logic lab=bus_A[6:1]}
+C {devices/lab_pin.sym} 3360 610 2 0 {name=p248 sig_type=std_logic lab=bus_A_int[6:1]}

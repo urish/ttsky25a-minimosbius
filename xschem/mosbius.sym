@@ -68,6 +68,7 @@ L 4 20 -100 340 -100 {}
 L 4 20 -1060 20 0 {}
 L 4 340 -1060 340 0 {}
 L 4 180 -830 180 -100 {}
+L 4 340 -60 360 -60 {}
 L 7 0 -1010 20 -1010 {}
 L 7 0 -990 20 -990 {}
 L 7 0 -20 20 -20 {}
@@ -125,6 +126,8 @@ B 5 357.5 -472.5 362.5 -467.5 {name=ctrl_nfetb_source dir=in }
 B 5 357.5 -452.5 362.5 -447.5 {name=ctrl_pfetb_width[1:0] dir=in }
 B 5 357.5 -432.5 362.5 -427.5 {name=ctrl_nfetb_width[1:0] dir=in }
 B 5 -2.5 -62.5 2.5 -57.5 {name=cfg_bus_short[6:1] dir=in }
+B 5 357.5 -62.5 362.5 -57.5 {name=cfg_bus_ext[5:1]
+dir=in}
 T {@symname} 32.5 -1056 0 0 0.3 0.3 {}
 T {@name} 295 -1082 0 0 0.2 0.2 {}
 T {cfga_vapwr[6:1]} 25 -774 0 0 0.2 0.2 {}
@@ -206,3 +209,4 @@ _mirn_a/b: n-mirror ratio
 _mirp_a/b: p-mirror ratio
 } 190 -330 0 0 0.18 0.18 {}
 T {Bus A/B Connection} 30 -90 0 0 0.3 0.3 {}
+T {cfg_bus_ext[5:1]} 245 -64 0 0 0.2 0.2 {}
