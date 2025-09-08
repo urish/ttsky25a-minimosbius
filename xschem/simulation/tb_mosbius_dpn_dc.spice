@@ -4,8 +4,8 @@ x1 g g g g g g VAPWR v g g v g g VDPWR GND net1[4] net1[3] net1[2] net1[1] net1[
 + v g g g g g v g g g g g v g g GND GND GND g g g v g g g g g v g g g g v g v g g g v g g g net2 g v g
 + g g g GND GND GND GND GND GND GND GND v g g v g g g g g v g g g g g v g g g g g v g g g g g v g g g g
 + g v g g GND GND vs1 vs0 g g g v g g GND GND g g g v g g g g g v g g g g g v g g g g g v g g g g g v g
-+ g GND GND g g g v g g GND GND GND GND g g g v g g g g g v g g GND GND GND GND GND GND v v v v v v
-+ mosbius
++ g GND GND g g g v g g GND GND GND GND g g g v g g g g g v g g GND GND GND GND GND GND v v v v v v v v
++ v v v mosbius
 VAPWR VAPWR GND 3.3
 .save i(vapwr)
 VDPWR VDPWR GND 1.8
@@ -52,7 +52,7 @@ VS0 vs0 GND 0
 
 
 *****************************************
-* N-Diff Pair DC Test
+* MOSBIUS: N-Diff Pair DC Test
 *****************************************
 * output current vs input voltage for the n-chnl differential pair.
 * compares the dp with mosbius parasitics vs dp in isolation
@@ -102,7 +102,7 @@ VS0 vs0 GND 0
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  mosbius.sym # of pins=53
+* expanding   symbol:  mosbius.sym # of pins=54
 ** sym_path: /foss/designs/ttsky25a_minimosbius/xschem/mosbius.sym
 ** sch_path: /foss/designs/ttsky25a_minimosbius/xschem/mosbius.sch
 .subckt mosbius cfga_vapwr[6] cfga_vapwr[5] cfga_vapwr[4] cfga_vapwr[3] cfga_vapwr[2] cfga_vapwr[1]
@@ -133,7 +133,8 @@ VS0 vs0 GND 0
 + ctrl_nfeta_width[0] cfga_pfeta_s[6] cfga_pfeta_s[5] cfga_pfeta_s[4] cfga_pfeta_s[3] cfga_pfeta_s[2] cfga_pfeta_s[1]
 + cfgb_pfetb_s[6] cfgb_pfetb_s[5] cfgb_pfetb_s[4] cfgb_pfetb_s[3] cfgb_pfetb_s[2] cfgb_pfetb_s[1] ctrl_pfetb_source
 + ctrl_nfetb_source ctrl_pfetb_width[1] ctrl_pfetb_width[0] ctrl_nfetb_width[1] ctrl_nfetb_width[0] cfg_bus_short[6]
-+ cfg_bus_short[5] cfg_bus_short[4] cfg_bus_short[3] cfg_bus_short[2] cfg_bus_short[1]
++ cfg_bus_short[5] cfg_bus_short[4] cfg_bus_short[3] cfg_bus_short[2] cfg_bus_short[1] cfg_bus_ext[5] cfg_bus_ext[4]
++ cfg_bus_ext[3] cfg_bus_ext[2] cfg_bus_ext[1]
 *.ipin cfga_vapwr[6],cfga_vapwr[5],cfga_vapwr[4],cfga_vapwr[3],cfga_vapwr[2],cfga_vapwr[1]
 *.ipin cfga_vgnd[6],cfga_vgnd[5],cfga_vgnd[4],cfga_vgnd[3],cfga_vgnd[2],cfga_vgnd[1]
 *.ipin cfga_otan_inp[3],cfga_otan_inp[2],cfga_otan_inp[1]
@@ -205,170 +206,171 @@ VS0 vs0 GND 0
 *.iopin VDPWR
 *.iopin VGND
 *.iopin bus_A[5],bus_A[4],bus_A[3],bus_A[2],bus_A[1]
+*.ipin cfg_bus_ext[5],cfg_bus_ext[4],cfg_bus_ext[3],cfg_bus_ext[2],cfg_bus_ext[1]
 x2 VAPWR VDPWR ibias ibias_p xpt_mirn_a xpt_mirn_b ctrl_mirn_a[1] ctrl_mirn_a[0] ctrl_mirn_b[1]
 + ctrl_mirn_b[0] VGND mirror_n
-x10[6] VGND VDPWR VAPWR cfga_vapwr[6] VAPWR bus_A[6] tt_asw_3v3
-x10[5] VGND VDPWR VAPWR cfga_vapwr[5] VAPWR bus_A[5] tt_asw_3v3
-x10[4] VGND VDPWR VAPWR cfga_vapwr[4] VAPWR bus_A[4] tt_asw_3v3
-x10[3] VGND VDPWR VAPWR cfga_vapwr[3] VAPWR bus_A[3] tt_asw_3v3
-x10[2] VGND VDPWR VAPWR cfga_vapwr[2] VAPWR bus_A[2] tt_asw_3v3
-x10[1] VGND VDPWR VAPWR cfga_vapwr[1] VAPWR bus_A[1] tt_asw_3v3
-x11[6] VGND VDPWR VAPWR cfga_vgnd[6] VGND bus_A[6] tt_asw_3v3
-x11[5] VGND VDPWR VAPWR cfga_vgnd[5] VGND bus_A[5] tt_asw_3v3
-x11[4] VGND VDPWR VAPWR cfga_vgnd[4] VGND bus_A[4] tt_asw_3v3
-x11[3] VGND VDPWR VAPWR cfga_vgnd[3] VGND bus_A[3] tt_asw_3v3
-x11[2] VGND VDPWR VAPWR cfga_vgnd[2] VGND bus_A[2] tt_asw_3v3
-x11[1] VGND VDPWR VAPWR cfga_vgnd[1] VGND bus_A[1] tt_asw_3v3
-x12[3] VGND VDPWR VAPWR cfga_otan_inp[3] xpt_otan_inp bus_A[3] tt_asw_3v3
-x12[2] VGND VDPWR VAPWR cfga_otan_inp[2] xpt_otan_inp bus_A[2] tt_asw_3v3
-x12[1] VGND VDPWR VAPWR cfga_otan_inp[1] xpt_otan_inp bus_A[1] tt_asw_3v3
-x13[6] VGND VDPWR VAPWR cfga_otan_out[6] xpt_otan_out bus_A[6] tt_asw_3v3
-x13[5] VGND VDPWR VAPWR cfga_otan_out[5] xpt_otan_out bus_A[5] tt_asw_3v3
-x13[4] VGND VDPWR VAPWR cfga_otan_out[4] xpt_otan_out bus_A[4] tt_asw_3v3
-x13[3] VGND VDPWR VAPWR cfga_otan_out[3] xpt_otan_out bus_A[3] tt_asw_3v3
-x13[2] VGND VDPWR VAPWR cfga_otan_out[2] xpt_otan_out bus_A[2] tt_asw_3v3
-x13[1] VGND VDPWR VAPWR cfga_otan_out[1] xpt_otan_out bus_A[1] tt_asw_3v3
-x14[6] VGND VDPWR VAPWR cfga_mirn_a[6] xpt_mirn_a bus_A[6] tt_asw_3v3
-x14[5] VGND VDPWR VAPWR cfga_mirn_a[5] xpt_mirn_a bus_A[5] tt_asw_3v3
-x14[4] VGND VDPWR VAPWR cfga_mirn_a[4] xpt_mirn_a bus_A[4] tt_asw_3v3
-x14[3] VGND VDPWR VAPWR cfga_mirn_a[3] xpt_mirn_a bus_A[3] tt_asw_3v3
-x14[2] VGND VDPWR VAPWR cfga_mirn_a[2] xpt_mirn_a bus_A[2] tt_asw_3v3
-x14[1] VGND VDPWR VAPWR cfga_mirn_a[1] xpt_mirn_a bus_A[1] tt_asw_3v3
-x15[6] VGND VDPWR VAPWR cfga_mirp_a[6] xpt_mirp_a bus_A[6] tt_asw_3v3
-x15[5] VGND VDPWR VAPWR cfga_mirp_a[5] xpt_mirp_a bus_A[5] tt_asw_3v3
-x15[4] VGND VDPWR VAPWR cfga_mirp_a[4] xpt_mirp_a bus_A[4] tt_asw_3v3
-x15[3] VGND VDPWR VAPWR cfga_mirp_a[3] xpt_mirp_a bus_A[3] tt_asw_3v3
-x15[2] VGND VDPWR VAPWR cfga_mirp_a[2] xpt_mirp_a bus_A[2] tt_asw_3v3
-x15[1] VGND VDPWR VAPWR cfga_mirp_a[1] xpt_mirp_a bus_A[1] tt_asw_3v3
-x16[3] VGND VDPWR VAPWR cfga_dpn_inp[3] xpt_dpn_inp bus_A[3] tt_asw_3v3
-x16[2] VGND VDPWR VAPWR cfga_dpn_inp[2] xpt_dpn_inp bus_A[2] tt_asw_3v3
-x16[1] VGND VDPWR VAPWR cfga_dpn_inp[1] xpt_dpn_inp bus_A[1] tt_asw_3v3
-x17[6] VGND VDPWR VAPWR cfga_dpn_outp[6] xpt_dpn_outp bus_A[6] tt_asw_3v3
-x17[5] VGND VDPWR VAPWR cfga_dpn_outp[5] xpt_dpn_outp bus_A[5] tt_asw_3v3
-x17[4] VGND VDPWR VAPWR cfga_dpn_outp[4] xpt_dpn_outp bus_A[4] tt_asw_3v3
-x17[3] VGND VDPWR VAPWR cfga_dpn_outp[3] xpt_dpn_outp bus_A[3] tt_asw_3v3
-x17[2] VGND VDPWR VAPWR cfga_dpn_outp[2] xpt_dpn_outp bus_A[2] tt_asw_3v3
-x17[1] VGND VDPWR VAPWR cfga_dpn_outp[1] xpt_dpn_outp bus_A[1] tt_asw_3v3
-x18[3] VGND VDPWR VAPWR cfga_dpp_inp[3] xpt_dpp_inp bus_A[3] tt_asw_3v3
-x18[2] VGND VDPWR VAPWR cfga_dpp_inp[2] xpt_dpp_inp bus_A[2] tt_asw_3v3
-x18[1] VGND VDPWR VAPWR cfga_dpp_inp[1] xpt_dpp_inp bus_A[1] tt_asw_3v3
-x19[6] VGND VDPWR VAPWR cfga_dpp_outp[6] xpt_dpp_outp bus_A[6] tt_asw_3v3
-x19[5] VGND VDPWR VAPWR cfga_dpp_outp[5] xpt_dpp_outp bus_A[5] tt_asw_3v3
-x19[4] VGND VDPWR VAPWR cfga_dpp_outp[4] xpt_dpp_outp bus_A[4] tt_asw_3v3
-x19[3] VGND VDPWR VAPWR cfga_dpp_outp[3] xpt_dpp_outp bus_A[3] tt_asw_3v3
-x19[2] VGND VDPWR VAPWR cfga_dpp_outp[2] xpt_dpp_outp bus_A[2] tt_asw_3v3
-x19[1] VGND VDPWR VAPWR cfga_dpp_outp[1] xpt_dpp_outp bus_A[1] tt_asw_3v3
-x20[6] VGND VDPWR VAPWR cfga_nfeta_d[6] xpt_nfeta_d bus_A[6] tt_asw_3v3
-x20[5] VGND VDPWR VAPWR cfga_nfeta_d[5] xpt_nfeta_d bus_A[5] tt_asw_3v3
-x20[4] VGND VDPWR VAPWR cfga_nfeta_d[4] xpt_nfeta_d bus_A[4] tt_asw_3v3
-x20[3] VGND VDPWR VAPWR cfga_nfeta_d[3] xpt_nfeta_d bus_A[3] tt_asw_3v3
-x20[2] VGND VDPWR VAPWR cfga_nfeta_d[2] xpt_nfeta_d bus_A[2] tt_asw_3v3
-x20[1] VGND VDPWR VAPWR cfga_nfeta_d[1] xpt_nfeta_d bus_A[1] tt_asw_3v3
-x21[6] VGND VDPWR VAPWR cfga_nfeta_g[6] xpt_nfeta_g bus_A[6] tt_asw_3v3
-x21[5] VGND VDPWR VAPWR cfga_nfeta_g[5] xpt_nfeta_g bus_A[5] tt_asw_3v3
-x21[4] VGND VDPWR VAPWR cfga_nfeta_g[4] xpt_nfeta_g bus_A[4] tt_asw_3v3
-x21[3] VGND VDPWR VAPWR cfga_nfeta_g[3] xpt_nfeta_g bus_A[3] tt_asw_3v3
-x21[2] VGND VDPWR VAPWR cfga_nfeta_g[2] xpt_nfeta_g bus_A[2] tt_asw_3v3
-x21[1] VGND VDPWR VAPWR cfga_nfeta_g[1] xpt_nfeta_g bus_A[1] tt_asw_3v3
-x22[6] VGND VDPWR VAPWR cfga_nfeta_s[6] xpt_nfeta_s bus_A[6] tt_asw_3v3
-x22[5] VGND VDPWR VAPWR cfga_nfeta_s[5] xpt_nfeta_s bus_A[5] tt_asw_3v3
-x22[4] VGND VDPWR VAPWR cfga_nfeta_s[4] xpt_nfeta_s bus_A[4] tt_asw_3v3
-x22[3] VGND VDPWR VAPWR cfga_nfeta_s[3] xpt_nfeta_s bus_A[3] tt_asw_3v3
-x22[2] VGND VDPWR VAPWR cfga_nfeta_s[2] xpt_nfeta_s bus_A[2] tt_asw_3v3
-x22[1] VGND VDPWR VAPWR cfga_nfeta_s[1] xpt_nfeta_s bus_A[1] tt_asw_3v3
-x23[6] VGND VDPWR VAPWR cfga_pfeta_d[6] xpt_pfeta_d bus_A[6] tt_asw_3v3
-x23[5] VGND VDPWR VAPWR cfga_pfeta_d[5] xpt_pfeta_d bus_A[5] tt_asw_3v3
-x23[4] VGND VDPWR VAPWR cfga_pfeta_d[4] xpt_pfeta_d bus_A[4] tt_asw_3v3
-x23[3] VGND VDPWR VAPWR cfga_pfeta_d[3] xpt_pfeta_d bus_A[3] tt_asw_3v3
-x23[2] VGND VDPWR VAPWR cfga_pfeta_d[2] xpt_pfeta_d bus_A[2] tt_asw_3v3
-x23[1] VGND VDPWR VAPWR cfga_pfeta_d[1] xpt_pfeta_d bus_A[1] tt_asw_3v3
-x24[6] VGND VDPWR VAPWR cfga_pfeta_g[6] xpt_pfeta_g bus_A[6] tt_asw_3v3
-x24[5] VGND VDPWR VAPWR cfga_pfeta_g[5] xpt_pfeta_g bus_A[5] tt_asw_3v3
-x24[4] VGND VDPWR VAPWR cfga_pfeta_g[4] xpt_pfeta_g bus_A[4] tt_asw_3v3
-x24[3] VGND VDPWR VAPWR cfga_pfeta_g[3] xpt_pfeta_g bus_A[3] tt_asw_3v3
-x24[2] VGND VDPWR VAPWR cfga_pfeta_g[2] xpt_pfeta_g bus_A[2] tt_asw_3v3
-x24[1] VGND VDPWR VAPWR cfga_pfeta_g[1] xpt_pfeta_g bus_A[1] tt_asw_3v3
-x25[6] VGND VDPWR VAPWR cfga_pfeta_s[6] xpt_pfeta_s bus_A[6] tt_asw_3v3
-x25[5] VGND VDPWR VAPWR cfga_pfeta_s[5] xpt_pfeta_s bus_A[5] tt_asw_3v3
-x25[4] VGND VDPWR VAPWR cfga_pfeta_s[4] xpt_pfeta_s bus_A[4] tt_asw_3v3
-x25[3] VGND VDPWR VAPWR cfga_pfeta_s[3] xpt_pfeta_s bus_A[3] tt_asw_3v3
-x25[2] VGND VDPWR VAPWR cfga_pfeta_s[2] xpt_pfeta_s bus_A[2] tt_asw_3v3
-x25[1] VGND VDPWR VAPWR cfga_pfeta_s[1] xpt_pfeta_s bus_A[1] tt_asw_3v3
-x28[3] VGND VDPWR VAPWR cfgb_otan_inm[3] xpt_otan_inm bus_B[3] tt_asw_3v3
-x28[2] VGND VDPWR VAPWR cfgb_otan_inm[2] xpt_otan_inm bus_B[2] tt_asw_3v3
-x28[1] VGND VDPWR VAPWR cfgb_otan_inm[1] xpt_otan_inm bus_B[1] tt_asw_3v3
-x30[6] VGND VDPWR VAPWR cfgb_mirn_b[6] xpt_mirn_b bus_B[6] tt_asw_3v3
-x30[5] VGND VDPWR VAPWR cfgb_mirn_b[5] xpt_mirn_b bus_B[5] tt_asw_3v3
-x30[4] VGND VDPWR VAPWR cfgb_mirn_b[4] xpt_mirn_b bus_B[4] tt_asw_3v3
-x30[3] VGND VDPWR VAPWR cfgb_mirn_b[3] xpt_mirn_b bus_B[3] tt_asw_3v3
-x30[2] VGND VDPWR VAPWR cfgb_mirn_b[2] xpt_mirn_b bus_B[2] tt_asw_3v3
-x30[1] VGND VDPWR VAPWR cfgb_mirn_b[1] xpt_mirn_b bus_B[1] tt_asw_3v3
-x31[6] VGND VDPWR VAPWR cfgb_mirp_b[6] xpt_mirp_b bus_B[6] tt_asw_3v3
-x31[5] VGND VDPWR VAPWR cfgb_mirp_b[5] xpt_mirp_b bus_B[5] tt_asw_3v3
-x31[4] VGND VDPWR VAPWR cfgb_mirp_b[4] xpt_mirp_b bus_B[4] tt_asw_3v3
-x31[3] VGND VDPWR VAPWR cfgb_mirp_b[3] xpt_mirp_b bus_B[3] tt_asw_3v3
-x31[2] VGND VDPWR VAPWR cfgb_mirp_b[2] xpt_mirp_b bus_B[2] tt_asw_3v3
-x31[1] VGND VDPWR VAPWR cfgb_mirp_b[1] xpt_mirp_b bus_B[1] tt_asw_3v3
-x32[3] VGND VDPWR VAPWR cfgb_dpn_inm[3] xpt_dpn_inm bus_B[3] tt_asw_3v3
-x32[2] VGND VDPWR VAPWR cfgb_dpn_inm[2] xpt_dpn_inm bus_B[2] tt_asw_3v3
-x32[1] VGND VDPWR VAPWR cfgb_dpn_inm[1] xpt_dpn_inm bus_B[1] tt_asw_3v3
-x33[6] VGND VDPWR VAPWR cfgb_dpn_outm[6] xpt_dpn_outm bus_B[6] tt_asw_3v3
-x33[5] VGND VDPWR VAPWR cfgb_dpn_outm[5] xpt_dpn_outm bus_B[5] tt_asw_3v3
-x33[4] VGND VDPWR VAPWR cfgb_dpn_outm[4] xpt_dpn_outm bus_B[4] tt_asw_3v3
-x33[3] VGND VDPWR VAPWR cfgb_dpn_outm[3] xpt_dpn_outm bus_B[3] tt_asw_3v3
-x33[2] VGND VDPWR VAPWR cfgb_dpn_outm[2] xpt_dpn_outm bus_B[2] tt_asw_3v3
-x33[1] VGND VDPWR VAPWR cfgb_dpn_outm[1] xpt_dpn_outm bus_B[1] tt_asw_3v3
-x34[3] VGND VDPWR VAPWR cfgb_dpp_inm[3] xpt_dpp_inm bus_B[3] tt_asw_3v3
-x34[2] VGND VDPWR VAPWR cfgb_dpp_inm[2] xpt_dpp_inm bus_B[2] tt_asw_3v3
-x34[1] VGND VDPWR VAPWR cfgb_dpp_inm[1] xpt_dpp_inm bus_B[1] tt_asw_3v3
-x35[6] VGND VDPWR VAPWR cfgb_dpp_outm[6] xpt_dpp_outm bus_B[6] tt_asw_3v3
-x35[5] VGND VDPWR VAPWR cfgb_dpp_outm[5] xpt_dpp_outm bus_B[5] tt_asw_3v3
-x35[4] VGND VDPWR VAPWR cfgb_dpp_outm[4] xpt_dpp_outm bus_B[4] tt_asw_3v3
-x35[3] VGND VDPWR VAPWR cfgb_dpp_outm[3] xpt_dpp_outm bus_B[3] tt_asw_3v3
-x35[2] VGND VDPWR VAPWR cfgb_dpp_outm[2] xpt_dpp_outm bus_B[2] tt_asw_3v3
-x35[1] VGND VDPWR VAPWR cfgb_dpp_outm[1] xpt_dpp_outm bus_B[1] tt_asw_3v3
-x36[6] VGND VDPWR VAPWR cfgb_nfetb_d[6] xpt_nfetb_d bus_B[6] tt_asw_3v3
-x36[5] VGND VDPWR VAPWR cfgb_nfetb_d[5] xpt_nfetb_d bus_B[5] tt_asw_3v3
-x36[4] VGND VDPWR VAPWR cfgb_nfetb_d[4] xpt_nfetb_d bus_B[4] tt_asw_3v3
-x36[3] VGND VDPWR VAPWR cfgb_nfetb_d[3] xpt_nfetb_d bus_B[3] tt_asw_3v3
-x36[2] VGND VDPWR VAPWR cfgb_nfetb_d[2] xpt_nfetb_d bus_B[2] tt_asw_3v3
-x36[1] VGND VDPWR VAPWR cfgb_nfetb_d[1] xpt_nfetb_d bus_B[1] tt_asw_3v3
-x37[6] VGND VDPWR VAPWR cfgb_nfetb_g[6] xpt_nfetb_g bus_B[6] tt_asw_3v3
-x37[5] VGND VDPWR VAPWR cfgb_nfetb_g[5] xpt_nfetb_g bus_B[5] tt_asw_3v3
-x37[4] VGND VDPWR VAPWR cfgb_nfetb_g[4] xpt_nfetb_g bus_B[4] tt_asw_3v3
-x37[3] VGND VDPWR VAPWR cfgb_nfetb_g[3] xpt_nfetb_g bus_B[3] tt_asw_3v3
-x37[2] VGND VDPWR VAPWR cfgb_nfetb_g[2] xpt_nfetb_g bus_B[2] tt_asw_3v3
-x37[1] VGND VDPWR VAPWR cfgb_nfetb_g[1] xpt_nfetb_g bus_B[1] tt_asw_3v3
-x38[6] VGND VDPWR VAPWR cfgb_nfetb_s[6] xpt_nfetb_s bus_B[6] tt_asw_3v3
-x38[5] VGND VDPWR VAPWR cfgb_nfetb_s[5] xpt_nfetb_s bus_B[5] tt_asw_3v3
-x38[4] VGND VDPWR VAPWR cfgb_nfetb_s[4] xpt_nfetb_s bus_B[4] tt_asw_3v3
-x38[3] VGND VDPWR VAPWR cfgb_nfetb_s[3] xpt_nfetb_s bus_B[3] tt_asw_3v3
-x38[2] VGND VDPWR VAPWR cfgb_nfetb_s[2] xpt_nfetb_s bus_B[2] tt_asw_3v3
-x38[1] VGND VDPWR VAPWR cfgb_nfetb_s[1] xpt_nfetb_s bus_B[1] tt_asw_3v3
-x39[6] VGND VDPWR VAPWR cfgb_pfetb_d[6] xpt_pfetb_d bus_B[6] tt_asw_3v3
-x39[5] VGND VDPWR VAPWR cfgb_pfetb_d[5] xpt_pfetb_d bus_B[5] tt_asw_3v3
-x39[4] VGND VDPWR VAPWR cfgb_pfetb_d[4] xpt_pfetb_d bus_B[4] tt_asw_3v3
-x39[3] VGND VDPWR VAPWR cfgb_pfetb_d[3] xpt_pfetb_d bus_B[3] tt_asw_3v3
-x39[2] VGND VDPWR VAPWR cfgb_pfetb_d[2] xpt_pfetb_d bus_B[2] tt_asw_3v3
-x39[1] VGND VDPWR VAPWR cfgb_pfetb_d[1] xpt_pfetb_d bus_B[1] tt_asw_3v3
-x40[6] VGND VDPWR VAPWR cfgb_pfetb_g[6] xpt_pfetb_g bus_B[6] tt_asw_3v3
-x40[5] VGND VDPWR VAPWR cfgb_pfetb_g[5] xpt_pfetb_g bus_B[5] tt_asw_3v3
-x40[4] VGND VDPWR VAPWR cfgb_pfetb_g[4] xpt_pfetb_g bus_B[4] tt_asw_3v3
-x40[3] VGND VDPWR VAPWR cfgb_pfetb_g[3] xpt_pfetb_g bus_B[3] tt_asw_3v3
-x40[2] VGND VDPWR VAPWR cfgb_pfetb_g[2] xpt_pfetb_g bus_B[2] tt_asw_3v3
-x40[1] VGND VDPWR VAPWR cfgb_pfetb_g[1] xpt_pfetb_g bus_B[1] tt_asw_3v3
-x41[6] VGND VDPWR VAPWR cfgb_pfetb_s[6] xpt_pfetb_s bus_B[6] tt_asw_3v3
-x41[5] VGND VDPWR VAPWR cfgb_pfetb_s[5] xpt_pfetb_s bus_B[5] tt_asw_3v3
-x41[4] VGND VDPWR VAPWR cfgb_pfetb_s[4] xpt_pfetb_s bus_B[4] tt_asw_3v3
-x41[3] VGND VDPWR VAPWR cfgb_pfetb_s[3] xpt_pfetb_s bus_B[3] tt_asw_3v3
-x41[2] VGND VDPWR VAPWR cfgb_pfetb_s[2] xpt_pfetb_s bus_B[2] tt_asw_3v3
-x41[1] VGND VDPWR VAPWR cfgb_pfetb_s[1] xpt_pfetb_s bus_B[1] tt_asw_3v3
-x42[6] VGND VDPWR VAPWR cfg_bus_short[6] bus_A[6] bus_B[6] tt_asw_3v3
-x42[5] VGND VDPWR VAPWR cfg_bus_short[5] bus_A[5] bus_B[5] tt_asw_3v3
-x42[4] VGND VDPWR VAPWR cfg_bus_short[4] bus_A[4] bus_B[4] tt_asw_3v3
-x42[3] VGND VDPWR VAPWR cfg_bus_short[3] bus_A[3] bus_B[3] tt_asw_3v3
-x42[2] VGND VDPWR VAPWR cfg_bus_short[2] bus_A[2] bus_B[2] tt_asw_3v3
-x42[1] VGND VDPWR VAPWR cfg_bus_short[1] bus_A[1] bus_B[1] tt_asw_3v3
+x10[6] VGND VDPWR VAPWR cfga_vapwr[6] VAPWR bus_A_int[6] tt_asw_3v3
+x10[5] VGND VDPWR VAPWR cfga_vapwr[5] VAPWR bus_A_int[5] tt_asw_3v3
+x10[4] VGND VDPWR VAPWR cfga_vapwr[4] VAPWR bus_A_int[4] tt_asw_3v3
+x10[3] VGND VDPWR VAPWR cfga_vapwr[3] VAPWR bus_A_int[3] tt_asw_3v3
+x10[2] VGND VDPWR VAPWR cfga_vapwr[2] VAPWR bus_A_int[2] tt_asw_3v3
+x10[1] VGND VDPWR VAPWR cfga_vapwr[1] VAPWR bus_A_int[1] tt_asw_3v3
+x11[6] VGND VDPWR VAPWR cfga_vgnd[6] VGND bus_A_int[6] tt_asw_3v3
+x11[5] VGND VDPWR VAPWR cfga_vgnd[5] VGND bus_A_int[5] tt_asw_3v3
+x11[4] VGND VDPWR VAPWR cfga_vgnd[4] VGND bus_A_int[4] tt_asw_3v3
+x11[3] VGND VDPWR VAPWR cfga_vgnd[3] VGND bus_A_int[3] tt_asw_3v3
+x11[2] VGND VDPWR VAPWR cfga_vgnd[2] VGND bus_A_int[2] tt_asw_3v3
+x11[1] VGND VDPWR VAPWR cfga_vgnd[1] VGND bus_A_int[1] tt_asw_3v3
+x12[3] VGND VDPWR VAPWR cfga_otan_inp[3] xpt_otan_inp bus_A_int[3] tt_asw_3v3
+x12[2] VGND VDPWR VAPWR cfga_otan_inp[2] xpt_otan_inp bus_A_int[2] tt_asw_3v3
+x12[1] VGND VDPWR VAPWR cfga_otan_inp[1] xpt_otan_inp bus_A_int[1] tt_asw_3v3
+x13[6] VGND VDPWR VAPWR cfga_otan_out[6] xpt_otan_out bus_A_int[6] tt_asw_3v3
+x13[5] VGND VDPWR VAPWR cfga_otan_out[5] xpt_otan_out bus_A_int[5] tt_asw_3v3
+x13[4] VGND VDPWR VAPWR cfga_otan_out[4] xpt_otan_out bus_A_int[4] tt_asw_3v3
+x13[3] VGND VDPWR VAPWR cfga_otan_out[3] xpt_otan_out bus_A_int[3] tt_asw_3v3
+x13[2] VGND VDPWR VAPWR cfga_otan_out[2] xpt_otan_out bus_A_int[2] tt_asw_3v3
+x13[1] VGND VDPWR VAPWR cfga_otan_out[1] xpt_otan_out bus_A_int[1] tt_asw_3v3
+x14[6] VGND VDPWR VAPWR cfga_mirn_a[6] xpt_mirn_a bus_A_int[6] tt_asw_3v3
+x14[5] VGND VDPWR VAPWR cfga_mirn_a[5] xpt_mirn_a bus_A_int[5] tt_asw_3v3
+x14[4] VGND VDPWR VAPWR cfga_mirn_a[4] xpt_mirn_a bus_A_int[4] tt_asw_3v3
+x14[3] VGND VDPWR VAPWR cfga_mirn_a[3] xpt_mirn_a bus_A_int[3] tt_asw_3v3
+x14[2] VGND VDPWR VAPWR cfga_mirn_a[2] xpt_mirn_a bus_A_int[2] tt_asw_3v3
+x14[1] VGND VDPWR VAPWR cfga_mirn_a[1] xpt_mirn_a bus_A_int[1] tt_asw_3v3
+x15[6] VGND VDPWR VAPWR cfga_mirp_a[6] xpt_mirp_a bus_A_int[6] tt_asw_3v3
+x15[5] VGND VDPWR VAPWR cfga_mirp_a[5] xpt_mirp_a bus_A_int[5] tt_asw_3v3
+x15[4] VGND VDPWR VAPWR cfga_mirp_a[4] xpt_mirp_a bus_A_int[4] tt_asw_3v3
+x15[3] VGND VDPWR VAPWR cfga_mirp_a[3] xpt_mirp_a bus_A_int[3] tt_asw_3v3
+x15[2] VGND VDPWR VAPWR cfga_mirp_a[2] xpt_mirp_a bus_A_int[2] tt_asw_3v3
+x15[1] VGND VDPWR VAPWR cfga_mirp_a[1] xpt_mirp_a bus_A_int[1] tt_asw_3v3
+x16[3] VGND VDPWR VAPWR cfga_dpn_inp[3] xpt_dpn_inp bus_A_int[3] tt_asw_3v3
+x16[2] VGND VDPWR VAPWR cfga_dpn_inp[2] xpt_dpn_inp bus_A_int[2] tt_asw_3v3
+x16[1] VGND VDPWR VAPWR cfga_dpn_inp[1] xpt_dpn_inp bus_A_int[1] tt_asw_3v3
+x17[6] VGND VDPWR VAPWR cfga_dpn_outp[6] xpt_dpn_outp bus_A_int[6] tt_asw_3v3
+x17[5] VGND VDPWR VAPWR cfga_dpn_outp[5] xpt_dpn_outp bus_A_int[5] tt_asw_3v3
+x17[4] VGND VDPWR VAPWR cfga_dpn_outp[4] xpt_dpn_outp bus_A_int[4] tt_asw_3v3
+x17[3] VGND VDPWR VAPWR cfga_dpn_outp[3] xpt_dpn_outp bus_A_int[3] tt_asw_3v3
+x17[2] VGND VDPWR VAPWR cfga_dpn_outp[2] xpt_dpn_outp bus_A_int[2] tt_asw_3v3
+x17[1] VGND VDPWR VAPWR cfga_dpn_outp[1] xpt_dpn_outp bus_A_int[1] tt_asw_3v3
+x18[3] VGND VDPWR VAPWR cfga_dpp_inp[3] xpt_dpp_inp bus_A_int[3] tt_asw_3v3
+x18[2] VGND VDPWR VAPWR cfga_dpp_inp[2] xpt_dpp_inp bus_A_int[2] tt_asw_3v3
+x18[1] VGND VDPWR VAPWR cfga_dpp_inp[1] xpt_dpp_inp bus_A_int[1] tt_asw_3v3
+x19[6] VGND VDPWR VAPWR cfga_dpp_outp[6] xpt_dpp_outp bus_A_int[6] tt_asw_3v3
+x19[5] VGND VDPWR VAPWR cfga_dpp_outp[5] xpt_dpp_outp bus_A_int[5] tt_asw_3v3
+x19[4] VGND VDPWR VAPWR cfga_dpp_outp[4] xpt_dpp_outp bus_A_int[4] tt_asw_3v3
+x19[3] VGND VDPWR VAPWR cfga_dpp_outp[3] xpt_dpp_outp bus_A_int[3] tt_asw_3v3
+x19[2] VGND VDPWR VAPWR cfga_dpp_outp[2] xpt_dpp_outp bus_A_int[2] tt_asw_3v3
+x19[1] VGND VDPWR VAPWR cfga_dpp_outp[1] xpt_dpp_outp bus_A_int[1] tt_asw_3v3
+x20[6] VGND VDPWR VAPWR cfga_nfeta_d[6] xpt_nfeta_d bus_A_int[6] tt_asw_3v3
+x20[5] VGND VDPWR VAPWR cfga_nfeta_d[5] xpt_nfeta_d bus_A_int[5] tt_asw_3v3
+x20[4] VGND VDPWR VAPWR cfga_nfeta_d[4] xpt_nfeta_d bus_A_int[4] tt_asw_3v3
+x20[3] VGND VDPWR VAPWR cfga_nfeta_d[3] xpt_nfeta_d bus_A_int[3] tt_asw_3v3
+x20[2] VGND VDPWR VAPWR cfga_nfeta_d[2] xpt_nfeta_d bus_A_int[2] tt_asw_3v3
+x20[1] VGND VDPWR VAPWR cfga_nfeta_d[1] xpt_nfeta_d bus_A_int[1] tt_asw_3v3
+x21[6] VGND VDPWR VAPWR cfga_nfeta_g[6] xpt_nfeta_g bus_A_int[6] tt_asw_3v3
+x21[5] VGND VDPWR VAPWR cfga_nfeta_g[5] xpt_nfeta_g bus_A_int[5] tt_asw_3v3
+x21[4] VGND VDPWR VAPWR cfga_nfeta_g[4] xpt_nfeta_g bus_A_int[4] tt_asw_3v3
+x21[3] VGND VDPWR VAPWR cfga_nfeta_g[3] xpt_nfeta_g bus_A_int[3] tt_asw_3v3
+x21[2] VGND VDPWR VAPWR cfga_nfeta_g[2] xpt_nfeta_g bus_A_int[2] tt_asw_3v3
+x21[1] VGND VDPWR VAPWR cfga_nfeta_g[1] xpt_nfeta_g bus_A_int[1] tt_asw_3v3
+x22[6] VGND VDPWR VAPWR cfga_nfeta_s[6] xpt_nfeta_s bus_A_int[6] tt_asw_3v3
+x22[5] VGND VDPWR VAPWR cfga_nfeta_s[5] xpt_nfeta_s bus_A_int[5] tt_asw_3v3
+x22[4] VGND VDPWR VAPWR cfga_nfeta_s[4] xpt_nfeta_s bus_A_int[4] tt_asw_3v3
+x22[3] VGND VDPWR VAPWR cfga_nfeta_s[3] xpt_nfeta_s bus_A_int[3] tt_asw_3v3
+x22[2] VGND VDPWR VAPWR cfga_nfeta_s[2] xpt_nfeta_s bus_A_int[2] tt_asw_3v3
+x22[1] VGND VDPWR VAPWR cfga_nfeta_s[1] xpt_nfeta_s bus_A_int[1] tt_asw_3v3
+x23[6] VGND VDPWR VAPWR cfga_pfeta_d[6] xpt_pfeta_d bus_A_int[6] tt_asw_3v3
+x23[5] VGND VDPWR VAPWR cfga_pfeta_d[5] xpt_pfeta_d bus_A_int[5] tt_asw_3v3
+x23[4] VGND VDPWR VAPWR cfga_pfeta_d[4] xpt_pfeta_d bus_A_int[4] tt_asw_3v3
+x23[3] VGND VDPWR VAPWR cfga_pfeta_d[3] xpt_pfeta_d bus_A_int[3] tt_asw_3v3
+x23[2] VGND VDPWR VAPWR cfga_pfeta_d[2] xpt_pfeta_d bus_A_int[2] tt_asw_3v3
+x23[1] VGND VDPWR VAPWR cfga_pfeta_d[1] xpt_pfeta_d bus_A_int[1] tt_asw_3v3
+x24[6] VGND VDPWR VAPWR cfga_pfeta_g[6] xpt_pfeta_g bus_A_int[6] tt_asw_3v3
+x24[5] VGND VDPWR VAPWR cfga_pfeta_g[5] xpt_pfeta_g bus_A_int[5] tt_asw_3v3
+x24[4] VGND VDPWR VAPWR cfga_pfeta_g[4] xpt_pfeta_g bus_A_int[4] tt_asw_3v3
+x24[3] VGND VDPWR VAPWR cfga_pfeta_g[3] xpt_pfeta_g bus_A_int[3] tt_asw_3v3
+x24[2] VGND VDPWR VAPWR cfga_pfeta_g[2] xpt_pfeta_g bus_A_int[2] tt_asw_3v3
+x24[1] VGND VDPWR VAPWR cfga_pfeta_g[1] xpt_pfeta_g bus_A_int[1] tt_asw_3v3
+x25[6] VGND VDPWR VAPWR cfga_pfeta_s[6] xpt_pfeta_s bus_A_int[6] tt_asw_3v3
+x25[5] VGND VDPWR VAPWR cfga_pfeta_s[5] xpt_pfeta_s bus_A_int[5] tt_asw_3v3
+x25[4] VGND VDPWR VAPWR cfga_pfeta_s[4] xpt_pfeta_s bus_A_int[4] tt_asw_3v3
+x25[3] VGND VDPWR VAPWR cfga_pfeta_s[3] xpt_pfeta_s bus_A_int[3] tt_asw_3v3
+x25[2] VGND VDPWR VAPWR cfga_pfeta_s[2] xpt_pfeta_s bus_A_int[2] tt_asw_3v3
+x25[1] VGND VDPWR VAPWR cfga_pfeta_s[1] xpt_pfeta_s bus_A_int[1] tt_asw_3v3
+x28[3] VGND VDPWR VAPWR cfgb_otan_inm[3] xpt_otan_inm bus_B_int[3] tt_asw_3v3
+x28[2] VGND VDPWR VAPWR cfgb_otan_inm[2] xpt_otan_inm bus_B_int[2] tt_asw_3v3
+x28[1] VGND VDPWR VAPWR cfgb_otan_inm[1] xpt_otan_inm bus_B_int[1] tt_asw_3v3
+x30[6] VGND VDPWR VAPWR cfgb_mirn_b[6] xpt_mirn_b bus_B_int[6] tt_asw_3v3
+x30[5] VGND VDPWR VAPWR cfgb_mirn_b[5] xpt_mirn_b bus_B_int[5] tt_asw_3v3
+x30[4] VGND VDPWR VAPWR cfgb_mirn_b[4] xpt_mirn_b bus_B_int[4] tt_asw_3v3
+x30[3] VGND VDPWR VAPWR cfgb_mirn_b[3] xpt_mirn_b bus_B_int[3] tt_asw_3v3
+x30[2] VGND VDPWR VAPWR cfgb_mirn_b[2] xpt_mirn_b bus_B_int[2] tt_asw_3v3
+x30[1] VGND VDPWR VAPWR cfgb_mirn_b[1] xpt_mirn_b bus_B_int[1] tt_asw_3v3
+x31[6] VGND VDPWR VAPWR cfgb_mirp_b[6] xpt_mirp_b bus_B_int[6] tt_asw_3v3
+x31[5] VGND VDPWR VAPWR cfgb_mirp_b[5] xpt_mirp_b bus_B_int[5] tt_asw_3v3
+x31[4] VGND VDPWR VAPWR cfgb_mirp_b[4] xpt_mirp_b bus_B_int[4] tt_asw_3v3
+x31[3] VGND VDPWR VAPWR cfgb_mirp_b[3] xpt_mirp_b bus_B_int[3] tt_asw_3v3
+x31[2] VGND VDPWR VAPWR cfgb_mirp_b[2] xpt_mirp_b bus_B_int[2] tt_asw_3v3
+x31[1] VGND VDPWR VAPWR cfgb_mirp_b[1] xpt_mirp_b bus_B_int[1] tt_asw_3v3
+x32[3] VGND VDPWR VAPWR cfgb_dpn_inm[3] xpt_dpn_inm bus_B_int[3] tt_asw_3v3
+x32[2] VGND VDPWR VAPWR cfgb_dpn_inm[2] xpt_dpn_inm bus_B_int[2] tt_asw_3v3
+x32[1] VGND VDPWR VAPWR cfgb_dpn_inm[1] xpt_dpn_inm bus_B_int[1] tt_asw_3v3
+x33[6] VGND VDPWR VAPWR cfgb_dpn_outm[6] xpt_dpn_outm bus_B_int[6] tt_asw_3v3
+x33[5] VGND VDPWR VAPWR cfgb_dpn_outm[5] xpt_dpn_outm bus_B_int[5] tt_asw_3v3
+x33[4] VGND VDPWR VAPWR cfgb_dpn_outm[4] xpt_dpn_outm bus_B_int[4] tt_asw_3v3
+x33[3] VGND VDPWR VAPWR cfgb_dpn_outm[3] xpt_dpn_outm bus_B_int[3] tt_asw_3v3
+x33[2] VGND VDPWR VAPWR cfgb_dpn_outm[2] xpt_dpn_outm bus_B_int[2] tt_asw_3v3
+x33[1] VGND VDPWR VAPWR cfgb_dpn_outm[1] xpt_dpn_outm bus_B_int[1] tt_asw_3v3
+x34[3] VGND VDPWR VAPWR cfgb_dpp_inm[3] xpt_dpp_inm bus_B_int[3] tt_asw_3v3
+x34[2] VGND VDPWR VAPWR cfgb_dpp_inm[2] xpt_dpp_inm bus_B_int[2] tt_asw_3v3
+x34[1] VGND VDPWR VAPWR cfgb_dpp_inm[1] xpt_dpp_inm bus_B_int[1] tt_asw_3v3
+x35[6] VGND VDPWR VAPWR cfgb_dpp_outm[6] xpt_dpp_outm bus_B_int[6] tt_asw_3v3
+x35[5] VGND VDPWR VAPWR cfgb_dpp_outm[5] xpt_dpp_outm bus_B_int[5] tt_asw_3v3
+x35[4] VGND VDPWR VAPWR cfgb_dpp_outm[4] xpt_dpp_outm bus_B_int[4] tt_asw_3v3
+x35[3] VGND VDPWR VAPWR cfgb_dpp_outm[3] xpt_dpp_outm bus_B_int[3] tt_asw_3v3
+x35[2] VGND VDPWR VAPWR cfgb_dpp_outm[2] xpt_dpp_outm bus_B_int[2] tt_asw_3v3
+x35[1] VGND VDPWR VAPWR cfgb_dpp_outm[1] xpt_dpp_outm bus_B_int[1] tt_asw_3v3
+x36[6] VGND VDPWR VAPWR cfgb_nfetb_d[6] xpt_nfetb_d bus_B_int[6] tt_asw_3v3
+x36[5] VGND VDPWR VAPWR cfgb_nfetb_d[5] xpt_nfetb_d bus_B_int[5] tt_asw_3v3
+x36[4] VGND VDPWR VAPWR cfgb_nfetb_d[4] xpt_nfetb_d bus_B_int[4] tt_asw_3v3
+x36[3] VGND VDPWR VAPWR cfgb_nfetb_d[3] xpt_nfetb_d bus_B_int[3] tt_asw_3v3
+x36[2] VGND VDPWR VAPWR cfgb_nfetb_d[2] xpt_nfetb_d bus_B_int[2] tt_asw_3v3
+x36[1] VGND VDPWR VAPWR cfgb_nfetb_d[1] xpt_nfetb_d bus_B_int[1] tt_asw_3v3
+x37[6] VGND VDPWR VAPWR cfgb_nfetb_g[6] xpt_nfetb_g bus_B_int[6] tt_asw_3v3
+x37[5] VGND VDPWR VAPWR cfgb_nfetb_g[5] xpt_nfetb_g bus_B_int[5] tt_asw_3v3
+x37[4] VGND VDPWR VAPWR cfgb_nfetb_g[4] xpt_nfetb_g bus_B_int[4] tt_asw_3v3
+x37[3] VGND VDPWR VAPWR cfgb_nfetb_g[3] xpt_nfetb_g bus_B_int[3] tt_asw_3v3
+x37[2] VGND VDPWR VAPWR cfgb_nfetb_g[2] xpt_nfetb_g bus_B_int[2] tt_asw_3v3
+x37[1] VGND VDPWR VAPWR cfgb_nfetb_g[1] xpt_nfetb_g bus_B_int[1] tt_asw_3v3
+x38[6] VGND VDPWR VAPWR cfgb_nfetb_s[6] xpt_nfetb_s bus_B_int[6] tt_asw_3v3
+x38[5] VGND VDPWR VAPWR cfgb_nfetb_s[5] xpt_nfetb_s bus_B_int[5] tt_asw_3v3
+x38[4] VGND VDPWR VAPWR cfgb_nfetb_s[4] xpt_nfetb_s bus_B_int[4] tt_asw_3v3
+x38[3] VGND VDPWR VAPWR cfgb_nfetb_s[3] xpt_nfetb_s bus_B_int[3] tt_asw_3v3
+x38[2] VGND VDPWR VAPWR cfgb_nfetb_s[2] xpt_nfetb_s bus_B_int[2] tt_asw_3v3
+x38[1] VGND VDPWR VAPWR cfgb_nfetb_s[1] xpt_nfetb_s bus_B_int[1] tt_asw_3v3
+x39[6] VGND VDPWR VAPWR cfgb_pfetb_d[6] xpt_pfetb_d bus_B_int[6] tt_asw_3v3
+x39[5] VGND VDPWR VAPWR cfgb_pfetb_d[5] xpt_pfetb_d bus_B_int[5] tt_asw_3v3
+x39[4] VGND VDPWR VAPWR cfgb_pfetb_d[4] xpt_pfetb_d bus_B_int[4] tt_asw_3v3
+x39[3] VGND VDPWR VAPWR cfgb_pfetb_d[3] xpt_pfetb_d bus_B_int[3] tt_asw_3v3
+x39[2] VGND VDPWR VAPWR cfgb_pfetb_d[2] xpt_pfetb_d bus_B_int[2] tt_asw_3v3
+x39[1] VGND VDPWR VAPWR cfgb_pfetb_d[1] xpt_pfetb_d bus_B_int[1] tt_asw_3v3
+x40[6] VGND VDPWR VAPWR cfgb_pfetb_g[6] xpt_pfetb_g bus_B_int[6] tt_asw_3v3
+x40[5] VGND VDPWR VAPWR cfgb_pfetb_g[5] xpt_pfetb_g bus_B_int[5] tt_asw_3v3
+x40[4] VGND VDPWR VAPWR cfgb_pfetb_g[4] xpt_pfetb_g bus_B_int[4] tt_asw_3v3
+x40[3] VGND VDPWR VAPWR cfgb_pfetb_g[3] xpt_pfetb_g bus_B_int[3] tt_asw_3v3
+x40[2] VGND VDPWR VAPWR cfgb_pfetb_g[2] xpt_pfetb_g bus_B_int[2] tt_asw_3v3
+x40[1] VGND VDPWR VAPWR cfgb_pfetb_g[1] xpt_pfetb_g bus_B_int[1] tt_asw_3v3
+x41[6] VGND VDPWR VAPWR cfgb_pfetb_s[6] xpt_pfetb_s bus_B_int[6] tt_asw_3v3
+x41[5] VGND VDPWR VAPWR cfgb_pfetb_s[5] xpt_pfetb_s bus_B_int[5] tt_asw_3v3
+x41[4] VGND VDPWR VAPWR cfgb_pfetb_s[4] xpt_pfetb_s bus_B_int[4] tt_asw_3v3
+x41[3] VGND VDPWR VAPWR cfgb_pfetb_s[3] xpt_pfetb_s bus_B_int[3] tt_asw_3v3
+x41[2] VGND VDPWR VAPWR cfgb_pfetb_s[2] xpt_pfetb_s bus_B_int[2] tt_asw_3v3
+x41[1] VGND VDPWR VAPWR cfgb_pfetb_s[1] xpt_pfetb_s bus_B_int[1] tt_asw_3v3
+x42[6] VGND VDPWR VAPWR cfg_bus_short[6] bus_A_int[6] bus_B_int[6] tt_asw_3v3
+x42[5] VGND VDPWR VAPWR cfg_bus_short[5] bus_A_int[5] bus_B_int[5] tt_asw_3v3
+x42[4] VGND VDPWR VAPWR cfg_bus_short[4] bus_A_int[4] bus_B_int[4] tt_asw_3v3
+x42[3] VGND VDPWR VAPWR cfg_bus_short[3] bus_A_int[3] bus_B_int[3] tt_asw_3v3
+x42[2] VGND VDPWR VAPWR cfg_bus_short[2] bus_A_int[2] bus_B_int[2] tt_asw_3v3
+x42[1] VGND VDPWR VAPWR cfg_bus_short[1] bus_A_int[1] bus_B_int[1] tt_asw_3v3
 x1 VAPWR VDPWR xpt_otan_inp xpt_otan_out xpt_otan_inm ctrl_otan_tail[1] ctrl_otan_tail[0]
 + ctrl_otan_diode ibias VGND ota_n
 x3 VAPWR VDPWR ibias_p xpt_mirp_a xpt_mirp_b ctrl_mirp_a[1] ctrl_mirp_a[0] ctrl_mirp_b[1]
@@ -385,6 +387,11 @@ x8 VAPWR VDPWR xpt_pfeta_s xpt_pfeta_g xpt_pfeta_d ctrl_pfeta_source ctrl_pfeta_
 + ctrl_pfeta_width[0] VGND pmos_prog
 x9 VAPWR VDPWR xpt_pfetb_s xpt_pfetb_g xpt_pfetb_d ctrl_pfetb_source ctrl_pfetb_width[1]
 + ctrl_pfetb_width[0] VGND pmos_prog
+x1[5] VGND VDPWR VAPWR cfg_bus_ext[5] bus_A[5] bus_A_int[5] tt_asw_3v3
+x1[4] VGND VDPWR VAPWR cfg_bus_ext[4] bus_A[4] bus_A_int[4] tt_asw_3v3
+x1[3] VGND VDPWR VAPWR cfg_bus_ext[3] bus_A[3] bus_A_int[3] tt_asw_3v3
+x1[2] VGND VDPWR VAPWR cfg_bus_ext[2] bus_A[2] bus_A_int[2] tt_asw_3v3
+x1[1] VGND VDPWR VAPWR cfg_bus_ext[1] bus_A[1] bus_A_int[1] tt_asw_3v3
 .ends
 
 
@@ -430,6 +437,9 @@ XM18 i2_2x ibias GND GND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=20 nf=4 ad='int((nf+
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 x1 GND VDPWR VAPWR ictrl_2[0] i2_1x iout_2 tt_asw_3v3
 x2 GND VDPWR VAPWR ictrl_2[1] i2_2x iout_2 tt_asw_3v3
+XM4 GND GND GND GND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=20 nf=4 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
 
@@ -495,6 +505,9 @@ XM10 itail_2x vbias GND GND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=40 nf=8 ad='int((
 x4 GND VDPWR VAPWR ctrl_tail[0] itail_1x itail tt_asw_3v3
 x5 GND VDPWR VAPWR ctrl_tail[1] itail_2x itail tt_asw_3v3
 x1 GND VDPWR VAPWR ctrl_source itail GND tt_asw_3v3
+XM3 itail itail itail itail sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=10 nf=2 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
 
@@ -566,7 +579,6 @@ XM14 net4 net2 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 ad='in
 *.ipin inp
 *.ipin inm
 *.opin out
-x1 VAPWR VDPWR outb out inp inm ctrl_tail[1] ctrl_tail[0] GND vbias GND diff_n
 XM1 outb outb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=60 nf=12 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
@@ -581,6 +593,26 @@ XM7 ctrl_diode_b ctrl_diode GND VGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 
 XM8 ctrl_diode_b ctrl_diode VDPWR VDPWR sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 VAPWR VAPWR VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=10 nf=2 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 outb inp itail itail sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=40 nf=8 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 out inm itail itail sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=40 nf=8 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM6 itail_1x vbias GND GND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=20 nf=4 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM9 itail vbias GND GND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=20 nf=4 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM10 itail_2x vbias GND GND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=40 nf=8 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+x4 GND VDPWR VAPWR ctrl_tail[0] itail_1x itail tt_asw_3v3
+x5 GND VDPWR VAPWR ctrl_tail[1] itail_2x itail tt_asw_3v3
 .ends
 
 
@@ -683,6 +715,9 @@ XM3 Vd_2x Vg Vs Vs sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=20 nf=4 ad='int((nf+1)/2
 x1 GND VDPWR VAPWR ctrl_width[0] Vd_1x Vd tt_asw_3v3
 x2 GND VDPWR VAPWR ctrl_width[1] Vd_2x Vd tt_asw_3v3
 x3 GND VDPWR VAPWR ctrl_source Vs GND tt_asw_3v3
+XM4 Vs Vs Vs Vs sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=20 nf=4 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
 
@@ -708,6 +743,12 @@ XM2 Vd_1x Vg Vs Vs sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=30 nf=6 ad='int((nf+1)/2
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
 XM3 Vd_2x Vg Vs Vs sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=60 nf=12 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 Vs Vs Vs Vs sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 Vs Vs Vs Vs sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
 .ends

@@ -260,6 +260,8 @@ N -220 -1110 -220 -1100 {
 lab=GND}
 N -220 -1110 -200 -1110 {
 lab=GND}
+N 660 -300 820 -300 {
+lab=v,v,v,v,v,v}
 C {mosbius.sym} 300 -240 0 0 {name=x1}
 C {devices/vsource.sym} 100 150 0 0 {name=VAPWR value=3.3}
 C {devices/gnd.sym} 100 180 0 0 {name=l1 lab=GND}
@@ -467,3 +469,4 @@ C {pad_model.sym} -50 -1030 0 0 {name=x2}
 C {devices/lab_pin.sym} -260 -1050 0 0 {name=p62 sig_type=std_logic lab=Ibias}
 C {devices/gnd.sym} -220 -1100 0 0 {name=l18 lab=GND}
 C {devices/gnd.sym} -220 -1000 0 0 {name=l19 lab=GND}
+C {devices/lab_wire.sym} 750 -300 0 0 {name=p6 sig_type=std_logic lab=v,v,v,v,v}

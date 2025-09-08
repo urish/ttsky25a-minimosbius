@@ -272,6 +272,8 @@ N 2080 -720 2120 -720 {
 lab=#net5}
 N 2080 -770 2080 -720 {
 lab=#net5}
+N 660 -300 820 -300 {
+lab=v,v,v,v,v,v}
 C {mosbius.sym} 300 -240 0 0 {name=x1}
 C {devices/vsource.sym} 100 150 0 0 {name=VAPWR value=3.3}
 C {devices/gnd.sym} 100 180 0 0 {name=l1 lab=GND}
@@ -477,3 +479,4 @@ value=1000
 footprint=1206
 device=resistor
 m=1}
+C {devices/lab_wire.sym} 750 -300 0 0 {name=p70 sig_type=std_logic lab=v,v,v,v,v}

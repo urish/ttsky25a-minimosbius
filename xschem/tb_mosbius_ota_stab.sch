@@ -242,6 +242,8 @@ N 1670 -930 1690 -930 {
 lab=GND}
 N 1690 -930 1690 -910 {
 lab=GND}
+N 660 -300 820 -300 {
+lab=v,v,v,v,v,v}
 C {mosbius.sym} 300 -240 0 0 {name=x1}
 C {devices/vsource.sym} 100 150 0 0 {name=VAPWR value=3.3}
 C {devices/gnd.sym} 100 180 0 0 {name=l1 lab=GND}
@@ -395,3 +397,4 @@ value=11p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 2250 -860 0 0 {name=l16 lab=GND}
+C {devices/lab_wire.sym} 750 -300 0 0 {name=p37 sig_type=std_logic lab=v,v,v,v,v}

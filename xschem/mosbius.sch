@@ -78,7 +78,7 @@ lab=VDPWR}
 N 2330 -2530 2360 -2530 {
 lab=VGND}
 N 2330 -2550 2510 -2550 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -2450 2360 -2450 {
 lab=VAPWR}
 N 2330 -2430 2360 -2430 {
@@ -98,7 +98,7 @@ lab=VDPWR}
 N 2330 -2050 2360 -2050 {
 lab=VGND}
 N 2330 -2070 2510 -2070 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -1970 2360 -1970 {
 lab=VAPWR}
 N 2330 -1950 2360 -1950 {
@@ -214,19 +214,19 @@ lab=xpt_nfetb_g}
 N 310 60 340 60 {
 lab=xpt_nfetb_s}
 N 1030 20 1060 20 {
-lab=xpt_pfetb_d}
+lab=xpt_pfetb_s}
 N 1030 40 1060 40 {
 lab=xpt_pfetb_g}
 N 1030 60 1060 60 {
-lab=xpt_pfetb_s}
+lab=xpt_pfetb_d}
 N 1030 -440 1060 -440 {
-lab=xpt_pfeta_d}
+lab=xpt_pfeta_s}
 N 1030 -420 1060 -420 {
 lab=xpt_pfeta_g}
 N 1030 -400 1060 -400 {
-lab=xpt_pfeta_s}
+lab=xpt_pfeta_d}
 N 2510 -2800 2510 -60 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -2570 2710 -2570 {
 lab=VAPWR}
 N 2330 -2410 2710 -2410 {
@@ -240,9 +240,9 @@ lab=xpt_otan_inp}
 N 1950 -2290 2030 -2290 {bus=true
 lab=cfga_otan_inp[3:1]}
 N 2330 -2390 2510 -2390 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -2230 2500 -2230 {bus=true
-lab=bus_A[3:1]}
+lab=bus_A_int[3:1]}
 N 1950 -2130 2030 -2130 {bus=true
 lab=cfga_otan_out[6:1]}
 N 2330 -2090 2710 -2090 {
@@ -262,25 +262,25 @@ lab=xpt_dpp_outp}
 N 2330 -970 2710 -970 {
 lab=xpt_nfeta_d}
 N 2330 -1910 2510 -1910 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -1750 2510 -1750 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -1430 2510 -1430 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -1110 2510 -1110 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -950 2510 -950 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -790 2510 -790 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -630 2510 -630 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -470 2510 -470 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -310 2510 -310 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -150 2510 -150 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 2330 -810 2710 -810 {
 lab=xpt_nfeta_g}
 N 2330 -650 2710 -650 {
@@ -292,9 +292,9 @@ lab=xpt_pfeta_g}
 N 2330 -170 2710 -170 {
 lab=xpt_pfeta_s}
 N 2330 -1590 2500 -1590 {bus=true
-lab=bus_A[3:1]}
+lab=bus_A_int[3:1]}
 N 2330 -1270 2500 -1270 {bus=true
-lab=bus_A[3:1]}
+lab=bus_A_int[3:1]}
 N 1950 -1970 2030 -1970 {bus=true
 lab=cfga_mirn_a[6:1]}
 N 1950 -1810 2030 -1810 {bus=true
@@ -398,7 +398,7 @@ lab=VDPWR}
 N 3830 -110 3860 -110 {
 lab=VGND}
 N 4010 -2780 4010 -40 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 3830 -2230 4210 -2230 {
 lab=xpt_otan_inm}
 N 3450 -2270 3530 -2270 {bus=true
@@ -420,25 +420,25 @@ lab=xpt_dpp_outm}
 N 3830 -950 4210 -950 {
 lab=xpt_nfetb_d}
 N 3830 -1890 4010 -1890 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 3830 -1730 4010 -1730 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 3830 -1410 4010 -1410 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 3830 -1090 4010 -1090 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 3830 -930 4010 -930 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 3830 -770 4010 -770 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 3830 -610 4010 -610 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 3830 -450 4010 -450 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 3830 -290 4010 -290 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 3830 -130 4010 -130 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 3830 -790 4210 -790 {
 lab=xpt_nfetb_g}
 N 3830 -630 4210 -630 {
@@ -496,9 +496,9 @@ lab=VDPWR}
 N 3180 490 3210 490 {
 lab=VGND}
 N 3180 450 3360 450 {bus=true
-lab=bus_A[6:1]}
+lab=bus_A_int[6:1]}
 N 3180 470 3360 470 {bus=true
-lab=bus_B[6:1]}
+lab=bus_B_int[6:1]}
 N 2800 410 2880 410 {bus=true
 lab=cfg_bus_short[6:1]}
 N 200 -1890 340 -1890 {bus=true
@@ -548,9 +548,9 @@ lab=VGND}
 N 3180 590 3360 590 {bus=true
 lab=bus_A[6:1]}
 N 3180 610 3360 610 {bus=true
-lab=bus_B[6:1]}
+lab=bus_A_int[6:1]}
 N 2800 550 2880 550 {bus=true
-lab=cfg_bus_short[6:1]}
+lab=cfg_bus_ext[5:1]}
 C {mirror_n.sym} 390 -1480 0 0 {name=x2}
 C {devices/lab_pin.sym} 310 -2050 0 0 {name=p1 sig_type=std_logic lab=VAPWR}
 C {devices/lab_pin.sym} 310 -2030 0 0 {name=p2 sig_type=std_logic lab=VDPWR}
@@ -688,9 +688,9 @@ C {devices/lab_pin.sym} 2710 -330 0 1 {name=p169 sig_type=std_logic lab=xpt_pfet
 C {devices/lab_pin.sym} 2710 -170 0 1 {name=p170 sig_type=std_logic lab=xpt_pfeta_s}
 C {devices/lab_pin.sym} 2510 -2800 1 0 {name=p274 sig_type=std_logic lab=bus_A_int[6:1]}
 C {devices/bus_connect_nolab.sym} 2500 -2230 0 0 {name=r1}
-C {devices/lab_wire.sym} 2440 -2230 0 0 {name=p171 sig_type=std_logic lab=bus_A[3:1]}
-C {devices/lab_wire.sym} 2450 -1590 0 0 {name=p172 sig_type=std_logic lab=bus_A[3:1]}
-C {devices/lab_wire.sym} 2450 -1270 0 0 {name=p173 sig_type=std_logic lab=bus_A[3:1]}
+C {devices/lab_wire.sym} 2440 -2230 0 0 {name=p171 sig_type=std_logic lab=bus_A_int[3:1]}
+C {devices/lab_wire.sym} 2450 -1590 0 0 {name=p172 sig_type=std_logic lab=bus_A_int[3:1]}
+C {devices/lab_wire.sym} 2450 -1270 0 0 {name=p173 sig_type=std_logic lab=bus_A_int[3:1]}
 C {devices/bus_connect_nolab.sym} 2500 -1590 0 0 {name=r2}
 C {devices/bus_connect_nolab.sym} 2500 -1270 0 0 {name=r3}
 C {devices/ipin.sym} 1950 -2610 0 0 {name=p174 lab=cfga_vapwr[6:1]}
@@ -776,9 +776,9 @@ C {devices/lab_pin.sym} 4210 -310 0 1 {name=p200 sig_type=std_logic lab=xpt_pfet
 C {devices/lab_pin.sym} 4210 -150 0 1 {name=p201 sig_type=std_logic lab=xpt_pfetb_s}
 C {devices/lab_pin.sym} 4010 -2780 1 0 {name=p202 sig_type=std_logic lab=bus_B_int[6:1]}
 C {devices/bus_connect_nolab.sym} 4000 -2210 0 0 {name=r4}
-C {devices/lab_wire.sym} 3940 -2210 0 0 {name=p203 sig_type=std_logic lab=bus_B[3:1]}
-C {devices/lab_wire.sym} 3950 -1570 0 0 {name=p204 sig_type=std_logic lab=bus_B[3:1]}
-C {devices/lab_wire.sym} 3950 -1250 0 0 {name=p205 sig_type=std_logic lab=bus_B[3:1]}
+C {devices/lab_wire.sym} 3940 -2210 0 0 {name=p203 sig_type=std_logic lab=bus_B_int[3:1]}
+C {devices/lab_wire.sym} 3950 -1570 0 0 {name=p204 sig_type=std_logic lab=bus_B_int[3:1]}
+C {devices/lab_wire.sym} 3950 -1250 0 0 {name=p205 sig_type=std_logic lab=bus_B_int[3:1]}
 C {devices/bus_connect_nolab.sym} 4000 -1570 0 0 {name=r5}
 C {devices/bus_connect_nolab.sym} 4000 -1250 0 0 {name=r6}
 C {devices/ipin.sym} 3450 -2270 0 0 {name=p208 lab=cfgb_otan_inm[3:1]}
@@ -844,5 +844,5 @@ C {devices/lab_pin.sym} 3210 550 0 1 {name=p243 sig_type=std_logic lab=VAPWR}
 C {devices/lab_pin.sym} 3210 570 0 1 {name=p244 sig_type=std_logic lab=VDPWR}
 C {devices/lab_pin.sym} 3210 630 0 1 {name=p245 sig_type=std_logic lab=VGND}
 C {devices/ipin.sym} 2800 550 0 0 {name=p246 lab=cfg_bus_ext[5:1]}
-C {devices/lab_pin.sym} 3360 590 2 0 {name=p247 sig_type=std_logic lab=bus_A[6:1]}
-C {devices/lab_pin.sym} 3360 610 2 0 {name=p248 sig_type=std_logic lab=bus_A_int[6:1]}
+C {devices/lab_pin.sym} 3360 590 2 0 {name=p247 sig_type=std_logic lab=bus_A[5:1]}
+C {devices/lab_pin.sym} 3360 610 2 0 {name=p248 sig_type=std_logic lab=bus_A_int[5:1]}
