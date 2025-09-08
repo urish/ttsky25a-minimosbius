@@ -2,9 +2,9 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO mosbius
+MACRO tt_um_mosbius
   CLASS BLOCK ;
-  FOREIGN mosbius ;
+  FOREIGN tt_um_mosbius ;
   ORIGIN 0.000 0.000 ;
   SIZE 493.120 BY 225.760 ;
   PIN clk
@@ -1942,6 +1942,6 @@ MACRO mosbius
         RECT 118.150 0.000 135.770 1.400 ;
         RECT 137.470 0.000 490.800 1.400 ;
   END
-END mosbius
+END tt_um_mosbius
 END LIBRARY
 
