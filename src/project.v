@@ -20,4 +20,21 @@ module tt_um_mosbius (
     input  wire       rst_n     // reset_n - low to reset
 );
 
+    tt_um_mosbius(
+        .bus5(ua[4]),
+	.bus4(ua[3]),
+	.bus3(ua[2]),
+	.bus2(ua[1]),
+	.bus1(ua[0]),
+	.ibias(ua[5]),
+	.VAPWR(VAPWR),
+	.VDPWR(VDPWR),
+	.VGND(VGND),
+	.clk(clk),
+	.dat_in(ui_in[0]),
+	.rst_n(ui_in[2]),
+	.dat_out(uo_out[0]),
+	.enable(ui_in[1])
+        );
+
 endmodule

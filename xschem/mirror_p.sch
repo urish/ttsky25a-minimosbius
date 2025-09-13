@@ -5,6 +5,7 @@ K {}
 V {}
 S {}
 E {}
+T {dummies} 1850 -180 0 0 0.4 0.4 {}
 N 830 600 970 600 {
 lab=i1_2x}
 N 490 430 530 430 {
@@ -183,6 +184,40 @@ N 1660 450 1660 580 {
 lab=VDPWR}
 N 1640 430 1640 560 {
 lab=VAPWR}
+N 1820 -360 1820 -300 {
+lab=VAPWR}
+N 1820 -240 1820 -220 {
+lab=VAPWR}
+N 1820 -220 1860 -220 {
+lab=VAPWR}
+N 1860 -360 1860 -220 {
+lab=VAPWR}
+N 1820 -360 1860 -360 {
+lab=VAPWR}
+N 1820 -270 1860 -270 {
+lab=VAPWR}
+N 1780 -360 1780 -270 {
+lab=VAPWR}
+N 1660 -360 1860 -360 {
+lab=VAPWR}
+N 1980 -360 1980 -300 {
+lab=VAPWR}
+N 1980 -240 1980 -220 {
+lab=VAPWR}
+N 1980 -220 2020 -220 {
+lab=VAPWR}
+N 2020 -360 2020 -220 {
+lab=VAPWR}
+N 1980 -360 2020 -360 {
+lab=VAPWR}
+N 1980 -270 2020 -270 {
+lab=VAPWR}
+N 1860 -360 1980 -360 {
+lab=VAPWR}
+N 1920 -270 1940 -270 {
+lab=ibias}
+N 1920 -270 1920 -240 {
+lab=ibias}
 C {devices/iopin.sym} -100 300 0 1 {name=p8 lab=ibias}
 C {devices/iopin.sym} -100 380 0 1 {name=p6 lab=iout_1}
 C {devices/ipin.sym} -100 480 0 0 {name=p4 lab=ictrl_1[1:0]}
@@ -319,3 +354,32 @@ C {devices/lab_pin.sym} 1280 -140 1 1 {name=p34 sig_type=std_logic lab=iout_2}
 C {devices/lab_pin.sym} 1460 -140 1 1 {name=p38 sig_type=std_logic lab=i2_1x}
 C {devices/lab_pin.sym} 1640 -140 1 1 {name=p40 sig_type=std_logic lab=i2_2x}
 C {devices/lab_pin.sym} -40 -360 0 0 {name=p3 sig_type=std_logic lab=VAPWR}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 1800 -270 0 0 {name=M8
+L=1
+W=40
+nf=8
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 1960 -270 0 0 {name=M9
+L=1
+W=5
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 1920 -240 3 0 {name=p12 sig_type=std_logic lab=ibias}

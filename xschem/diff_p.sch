@@ -5,6 +5,7 @@ K {}
 V {}
 S {}
 E {}
+T {dummies} 260 300 0 0 0.4 0.4 {}
 N 240 -170 300 -170 {
 lab=itail}
 N 520 -170 580 -170 {
@@ -131,6 +132,22 @@ N 1500 380 1500 440 {
 lab=VAPWR}
 N 1460 440 1500 440 {
 lab=VAPWR}
+N 300 140 300 200 {
+lab=itail}
+N 300 260 300 280 {
+lab=itail}
+N 300 280 340 280 {
+lab=itail}
+N 340 140 340 280 {
+lab=itail}
+N 300 140 340 140 {
+lab=itail}
+N 300 230 340 230 {
+lab=itail}
+N 260 140 260 230 {
+lab=itail}
+N 260 140 300 140 {
+lab=itail}
 C {tt_asw_3v3.sym} 1310 160 0 0 {name=x4}
 C {tt_asw_3v3.sym} 1310 290 0 0 {name=x5}
 C {devices/lab_pin.sym} 1120 120 0 0 {name=p25 sig_type=std_logic lab=ctrl_tail[0]}
@@ -233,3 +250,18 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 1040 -230 0 0 {name=p23 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} 1050 -360 0 0 {name=p17 sig_type=std_logic lab=VAPWR}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 280 230 0 0 {name=M2
+L=0.5
+W=20
+nf=4
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 300 140 3 1 {name=p18 sig_type=std_logic lab=itail}
