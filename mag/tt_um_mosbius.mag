@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1757725522
+timestamp 1757730244
 << dnwell >>
 rect 8500 4200 10700 7700
 rect 12200 4200 14400 7700
@@ -6506,6 +6506,13 @@ rect 23360 44950 23550 44960
 rect 300 43980 480 44160
 rect 620 43980 800 44160
 rect 940 43980 1120 44160
+rect 4080 43980 4240 44140
+rect 4400 43980 4560 44140
+rect 4720 43980 4880 44140
+rect 7840 43980 8000 44140
+rect 8160 43980 8320 44140
+rect 8480 43980 8640 44140
+rect 11620 43980 11780 44140
 rect 11910 44080 12120 44760
 rect 15630 44640 15640 44770
 rect 15810 44640 15820 44770
@@ -6529,7 +6536,75 @@ rect 23850 44420 24180 44430
 rect 23850 44270 23860 44420
 rect 24170 44270 24180 44420
 rect 23850 44260 24180 44270
+rect 11940 43980 12100 44080
+rect 12260 43980 12420 44140
+rect 15380 44000 15540 44160
+rect 15700 44000 15860 44160
+rect 16020 44000 16180 44160
+rect 19160 44000 19320 44160
+rect 19480 44000 19640 44160
+rect 19800 44000 19960 44160
+rect 22940 44000 23100 44160
+rect 23260 44000 23420 44160
+rect 23580 44000 23740 44160
+rect 26700 44000 26860 44160
 rect 27000 44050 27220 44870
+rect 27020 44000 27180 44050
+rect 27340 44000 27500 44160
+rect 30480 44000 30640 44160
+rect 30800 44000 30960 44160
+rect 31120 44000 31280 44160
+rect 34260 44000 34420 44160
+rect 34580 44000 34740 44160
+rect 34900 44000 35060 44160
+rect 38020 44000 38180 44160
+rect 38340 44000 38500 44160
+rect 38660 44000 38820 44160
+rect 41800 44000 41960 44160
+rect 42120 44000 42280 44160
+rect 42440 44000 42600 44160
+rect 45560 44000 45720 44160
+rect 45880 44000 46040 44160
+rect 46200 44000 46360 44160
+rect 49340 44000 49500 44160
+rect 49660 44000 49820 44160
+rect 49980 44000 50140 44160
+rect 53120 44000 53280 44160
+rect 53440 44000 53600 44160
+rect 53760 44000 53920 44160
+rect 56860 44000 57020 44160
+rect 57180 44000 57340 44160
+rect 57500 44000 57660 44160
+rect 60640 44000 60800 44160
+rect 60960 44000 61120 44160
+rect 61280 44000 61440 44160
+rect 64420 44000 64580 44160
+rect 64740 44000 64900 44160
+rect 65060 44000 65220 44160
+rect 68200 44000 68360 44160
+rect 68520 44000 68680 44160
+rect 68840 44000 69000 44160
+rect 71980 44000 72140 44160
+rect 72300 44000 72460 44160
+rect 72620 44000 72780 44160
+rect 75720 44000 75880 44160
+rect 76040 44000 76200 44160
+rect 76360 44000 76520 44160
+rect 79500 44000 79660 44160
+rect 79820 44000 79980 44160
+rect 80140 44000 80300 44160
+rect 83280 44000 83440 44160
+rect 83600 44000 83760 44160
+rect 83920 44000 84080 44160
+rect 87060 44000 87220 44160
+rect 87380 44000 87540 44160
+rect 87700 44000 87860 44160
+rect 90840 44000 91000 44160
+rect 91160 44000 91320 44160
+rect 91480 44000 91640 44160
+rect 94600 44000 94760 44160
+rect 94920 44000 95080 44160
+rect 95240 44000 95400 44160
 rect 2700 40374 3100 40600
 rect 2700 39990 2710 40374
 rect 3094 39990 3100 40374
@@ -7854,159 +7929,159 @@ rect 96060 90 96660 100
 rect 82570 80 83170 90
 rect 26820 0 27820 10
 use mosbius_col6  mosbius_col6_2
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 64370 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col6  mosbius_col6_3
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 68142 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col7  mosbius_col7_9
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 7790 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col7  mosbius_col7_10
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 11562 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col7  mosbius_col7_11
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 37966 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col7  mosbius_col7_12
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 45510 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col7  mosbius_col7_13
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 41738 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col7  mosbius_col7_14
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 49282 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col7  mosbius_col7_15
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 71914 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col7  mosbius_col7_16
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 83230 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_3
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 246 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_4
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 4018 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_11
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 15334 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_12
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 30422 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_13
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 26650 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_14
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 22878 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_18
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 19106 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_19
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 34194 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_20
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 60598 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_21
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 56826 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_24
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 53054 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_26
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 75686 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_27
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 79458 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_28
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 90774 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_29
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 94546 0 1 36332
 box -146 -32354 3794 8020
 use mosbius_col8  mosbius_col8_30
-timestamp 1757702570
+timestamp 1757730244
 transform 1 0 87002 0 1 36332
 box -146 -32354 3794 8020
 use sky130_fd_pr__nfet_01v8_EDB9KC  sky130_fd_pr__nfet_01v8_EDB9KC_0
-timestamp 1757702553
+timestamp 1757730208
 transform 1 0 52538 0 1 929
 box -211 -252 211 252
 use sky130_fd_pr__nfet_g5v0d10v5_8ML6AG  sky130_fd_pr__nfet_g5v0d10v5_8ML6AG_2
-timestamp 1757702553
+timestamp 1757730208
 transform 1 0 40671 0 1 6608
 box -1621 -758 1621 758
 use sky130_fd_pr__nfet_g5v0d10v5_8ML6AG  sky130_fd_pr__nfet_g5v0d10v5_8ML6AG_3
-timestamp 1757702553
+timestamp 1757730208
 transform 1 0 49071 0 1 6608
 box -1621 -758 1621 758
 use sky130_fd_pr__nfet_g5v0d10v5_8263FJ  sky130_fd_pr__nfet_g5v0d10v5_8263FJ_1
-timestamp 1757702553
+timestamp 1757730208
 transform -1 0 9573 0 -1 5967
 box -673 -1367 673 1367
 use sky130_fd_pr__nfet_g5v0d10v5_8263FJ  sky130_fd_pr__nfet_g5v0d10v5_8263FJ_3
-timestamp 1757702553
+timestamp 1757730208
 transform -1 0 13273 0 -1 5967
 box -673 -1367 673 1367
 use sky130_fd_pr__nfet_g5v0d10v5_CLGMFJ  sky130_fd_pr__nfet_g5v0d10v5_CLGMFJ_1
-timestamp 1757702553
+timestamp 1757730208
 transform 1 0 42411 0 1 3167
 box -3811 -1367 3811 1367
 use sky130_fd_pr__pfet_01v8_hvt_UAQRRG  sky130_fd_pr__pfet_01v8_hvt_UAQRRG_0
-timestamp 1757702553
+timestamp 1757730208
 transform 1 0 52081 0 1 929
 box -211 -319 211 319
 use sky130_fd_pr__pfet_g5v0d10v5_AA5R3U  sky130_fd_pr__pfet_g5v0d10v5_AA5R3U_2
-timestamp 1757702553
+timestamp 1757730208
 transform 1 0 68183 0 1 11315
 box -2283 -1415 2283 1415
 use sky130_fd_pr__pfet_g5v0d10v5_FGL9HY  sky130_fd_pr__pfet_g5v0d10v5_FGL9HY_0
-timestamp 1757702553
+timestamp 1757730208
 transform 1 0 85223 0 1 6725
 box -1335 -1415 1335 1415
 use sky130_fd_pr__pfet_g5v0d10v5_FGL9HY  sky130_fd_pr__pfet_g5v0d10v5_FGL9HY_3
-timestamp 1757702553
+timestamp 1757730208
 transform 1 0 85213 0 1 3405
 box -1335 -1415 1335 1415
 use sky130_fd_pr__pfet_g5v0d10v5_N4SDRF  sky130_fd_pr__pfet_g5v0d10v5_N4SDRF_1
-timestamp 1757702553
+timestamp 1757730208
 transform -1 0 70241 0 -1 5551
 box -3841 -2651 3841 2651
 use sky130_fd_pr__pfet_g5v0d10v5_R4AJ4P  sky130_fd_pr__pfet_g5v0d10v5_R4AJ4P_1
-timestamp 1757702553
+timestamp 1757730208
 transform 1 0 48735 0 1 3115
 box -2035 -1415 2035 1415
 use sky130_fd_sc_hd__clkinv_16  sky130_fd_sc_hd__clkinv_16_0
-timestamp 1757702553
+timestamp 1757730208
 transform -1 0 28014 0 -1 44706
 box -38 -48 2246 592
 use sky130_fd_sc_hd__tap_1  sky130_fd_sc_hd__tap_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
@@ -8018,7 +8093,7 @@ timestamp 1675710598
 transform -1 0 25808 0 -1 44706
 box -38 -48 130 592
 use tt_asw_3v3  tt_asw_3v3_0
-timestamp 1757702553
+timestamp 1757730208
 transform 0 -1 58720 1 0 82
 box 0 0 3612 4352
 << labels >>
@@ -8130,6 +8205,156 @@ flabel metal4 s 25638 44952 25698 45152 0 FreeSans 480 90 0 0 clk
 port 0 nsew signal input
 flabel metal4 s 12390 44952 12450 45152 0 FreeSans 480 90 0 0 uo_out[6]
 port 49 nsew signal tristate
+flabel metal4 4080 43980 4240 44140 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 4400 43980 4560 44140 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 4720 43980 4880 44140 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 7840 43980 8000 44140 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 8160 43980 8320 44140 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 8480 43980 8640 44140 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 11620 43980 11780 44140 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 11940 43980 12100 44140 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 12260 43980 12420 44140 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 15380 44000 15540 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 15700 44000 15860 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 16020 44000 16180 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 19160 44000 19320 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 19480 44000 19640 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 19800 44000 19960 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 22940 44000 23100 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 23260 44000 23420 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 23580 44000 23740 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 26700 44000 26860 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 27020 44000 27180 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 27340 44000 27500 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 30480 44000 30640 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 30800 44000 30960 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 31120 44000 31280 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 34260 44000 34420 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 34580 44000 34740 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 34900 44000 35060 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 38020 44000 38180 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 38340 44000 38500 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 38660 44000 38820 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 41800 44000 41960 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 42120 44000 42280 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 42440 44000 42600 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 45560 44000 45720 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 45880 44000 46040 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 46200 44000 46360 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 49340 44000 49500 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 49660 44000 49820 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 49980 44000 50140 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 53120 44000 53280 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 53440 44000 53600 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 53760 44000 53920 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 56860 44000 57020 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 57180 44000 57340 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 57500 44000 57660 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 60640 44000 60800 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 60960 44000 61120 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 61280 44000 61440 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 64420 44000 64580 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 64740 44000 64900 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 65060 44000 65220 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 68200 44000 68360 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 68520 44000 68680 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 68840 44000 69000 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 71980 44000 72140 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 72300 44000 72460 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 72620 44000 72780 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 75720 44000 75880 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 76040 44000 76200 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 76360 44000 76520 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 79500 44000 79660 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 79820 44000 79980 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 80140 44000 80300 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 83280 44000 83440 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 83600 44000 83760 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 83920 44000 84080 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 87060 44000 87220 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 87380 44000 87540 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 87700 44000 87860 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 90840 44000 91000 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 91160 44000 91320 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 91480 44000 91640 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
+flabel metal4 94600 44000 94760 44160 1 FreeSans 400 0 0 0 VDPWR
+port 54 nsew power bidirectional
+flabel metal4 94920 44000 95080 44160 1 FreeSans 400 0 0 0 VGND
+port 52 nsew ground bidirectional
+flabel metal4 95240 44000 95400 44160 1 FreeSans 400 0 0 0 VAPWR
+port 53 nsew power bidirectional
 << properties >>
 string FIXED_BBOX 0 0 98624 45152
 << end >>

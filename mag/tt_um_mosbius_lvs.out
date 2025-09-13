@@ -277,8 +277,8 @@ ua[2]                                      |bus3 **Mismatch**
 ua[1]                                      |bus2 **Mismatch**                          
 ui_in[0]                                   |dat_in **Mismatch**                        
 clk                                        |clk                                        
-VGND                                       |VGND                                       
 VDPWR                                      |VDPWR                                      
+VGND                                       |VGND                                       
 ui_in[1]                                   |enable **Mismatch**                        
 ui_in[2]                                   |rst_n **Mismatch**                         
 VAPWR                                      |VAPWR                                      

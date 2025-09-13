@@ -422,6 +422,106 @@ MACRO tt_um_mosbius
       LAYER met4 ;
         RECT 3.100 219.900 4.000 220.800 ;
     END
+    PORT
+      LAYER met4 ;
+        RECT 22.000 219.900 22.800 220.700 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 40.800 219.900 41.600 220.700 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 59.700 219.900 60.500 220.700 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 78.500 220.000 79.300 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 97.400 220.000 98.200 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 116.300 220.000 117.100 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 135.100 220.000 135.900 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 154.000 220.000 154.800 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 172.900 220.000 173.700 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 191.700 220.000 192.500 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 210.600 220.000 211.400 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 229.400 220.000 230.200 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 248.300 220.000 249.100 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 267.200 220.000 268.000 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 285.900 220.000 286.700 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 304.800 220.000 305.600 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 323.700 220.000 324.500 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 342.600 220.000 343.400 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 361.500 220.000 362.300 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 380.200 220.000 381.000 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 399.100 220.000 399.900 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 418.000 220.000 418.800 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 436.900 220.000 437.700 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 455.800 220.000 456.600 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 474.600 220.000 475.400 220.800 ;
+    END
   END VGND
   PIN VAPWR
     DIRECTION INOUT ;
@@ -430,6 +530,106 @@ MACRO tt_um_mosbius
       LAYER met4 ;
         RECT 4.700 219.900 5.600 220.800 ;
     END
+    PORT
+      LAYER met4 ;
+        RECT 23.600 219.900 24.400 220.700 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 42.400 219.900 43.200 220.700 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 61.300 219.900 62.100 220.700 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 80.100 220.000 80.900 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 99.000 220.000 99.800 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 117.900 220.000 118.700 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 136.700 220.000 137.500 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 155.600 220.000 156.400 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 174.500 220.000 175.300 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 193.300 220.000 194.100 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 212.200 220.000 213.000 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 231.000 220.000 231.800 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 249.900 220.000 250.700 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 268.800 220.000 269.600 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 287.500 220.000 288.300 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 306.400 220.000 307.200 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 325.300 220.000 326.100 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 344.200 220.000 345.000 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 363.100 220.000 363.900 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 381.800 220.000 382.600 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 400.700 220.000 401.500 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 419.600 220.000 420.400 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 438.500 220.000 439.300 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 457.400 220.000 458.200 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 476.200 220.000 477.000 220.800 ;
+    END
   END VAPWR
   PIN VDPWR
     DIRECTION INOUT ;
@@ -437,6 +637,106 @@ MACRO tt_um_mosbius
     PORT
       LAYER met4 ;
         RECT 1.500 219.900 2.400 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 20.400 219.900 21.200 220.700 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 39.200 219.900 40.000 220.700 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 58.100 219.900 58.900 220.700 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 76.900 220.000 77.700 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 95.800 220.000 96.600 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 114.700 220.000 115.500 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 133.500 220.000 134.300 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 152.400 220.000 153.200 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 171.300 220.000 172.100 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 190.100 220.000 190.900 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 209.000 220.000 209.800 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 227.800 220.000 228.600 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 246.700 220.000 247.500 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 265.600 220.000 266.400 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 284.300 220.000 285.100 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 303.200 220.000 304.000 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 322.100 220.000 322.900 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 341.000 220.000 341.800 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 359.900 220.000 360.700 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 378.600 220.000 379.400 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 397.500 220.000 398.300 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 416.400 220.000 417.200 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 435.300 220.000 436.100 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 454.200 220.000 455.000 220.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 473.000 220.000 473.800 220.800 ;
     END
   END VDPWR
   OBS
@@ -500,7 +800,34 @@ MACRO tt_um_mosbius
         RECT 128.890 224.360 130.550 225.750 ;
         RECT 131.650 224.360 490.800 225.750 ;
         RECT 1.330 221.200 490.800 224.360 ;
-        RECT 6.000 219.500 490.800 221.200 ;
+        RECT 6.000 221.100 76.500 221.200 ;
+        RECT 6.000 219.500 20.000 221.100 ;
+        RECT 24.800 219.500 38.800 221.100 ;
+        RECT 43.600 219.500 57.700 221.100 ;
+        RECT 62.500 219.600 76.500 221.100 ;
+        RECT 81.300 219.600 95.400 221.200 ;
+        RECT 100.200 219.600 114.300 221.200 ;
+        RECT 119.100 219.600 133.100 221.200 ;
+        RECT 137.900 219.600 152.000 221.200 ;
+        RECT 156.800 219.600 170.900 221.200 ;
+        RECT 175.700 219.600 189.700 221.200 ;
+        RECT 194.500 219.600 208.600 221.200 ;
+        RECT 213.400 219.600 227.400 221.200 ;
+        RECT 232.200 219.600 246.300 221.200 ;
+        RECT 251.100 219.600 265.200 221.200 ;
+        RECT 270.000 219.600 283.900 221.200 ;
+        RECT 288.700 219.600 302.800 221.200 ;
+        RECT 307.600 219.600 321.700 221.200 ;
+        RECT 326.500 219.600 340.600 221.200 ;
+        RECT 345.400 219.600 359.500 221.200 ;
+        RECT 364.300 219.600 378.200 221.200 ;
+        RECT 383.000 219.600 397.100 221.200 ;
+        RECT 401.900 219.600 416.000 221.200 ;
+        RECT 420.800 219.600 434.900 221.200 ;
+        RECT 439.700 219.600 453.800 221.200 ;
+        RECT 458.600 219.600 472.600 221.200 ;
+        RECT 477.400 219.600 490.800 221.200 ;
+        RECT 62.500 219.500 490.800 219.600 ;
         RECT 1.330 1.400 490.800 219.500 ;
         RECT 2.230 0.000 19.850 1.400 ;
         RECT 21.550 0.000 39.170 1.400 ;
