@@ -16,10 +16,10 @@ jobs:
       - name: Read top module name
         id: top_module
         run: |
-          echo TOP_MODULE=`yq '.project.top_module' info.yaml` > $GITHUB_OUTPUT
+          echo TOP_MODULE=`yq '.project.top_module' info.yaml` | tee $GITHUB_OUTPUT
 
       - name: Create and publish the GDS artifact
-        uses: TinyTapeout/tt-gds-action/custom_gds@ttsky25a
+        uses: TinyTapeout/tt-gds-action/custom_gds@ttsky25b
         with:
           top_module: ${{ steps.top_module.outputs.TOP_MODULE }}
           gds_path: gds/${{ steps.top_module.outputs.TOP_MODULE }}.gds
@@ -31,10 +31,9 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Run Tiny Tapeout Precheck
-        uses: TinyTapeout/tt-gds-action/precheck@ttsky25a
+        uses: TinyTapeout/tt-gds-action/precheck@ttsky25b
         with:
           pdk: sky130
-          tools-ref: ttsky25a
 
   viewer:
     needs: gds
